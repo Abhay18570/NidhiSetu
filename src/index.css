@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gov-navy: #0B1F54;
+  --color-gov-navy-dark: #071438;
+  --color-gov-navy-light: #162E73;
+  --color-gov-blue: #174EA6;
+  --color-gov-blue-light: #E8F0FE;
+  --color-gov-bg: #F5F7FB;
+  --color-gov-saffron: #E89B24;
+  --color-gov-saffron-light: #FEF7EC;
+  --color-gov-saffron-dark: #C67C11;
+  --color-gov-green: #13805E;
+  --color-gov-green-light: #E6F4EA;
+  --color-gov-dark: #0D1B2A;
+  --color-gov-border: #D3DDEB;
+  --color-gov-surface: #FFFFFF;
+  --color-gov-muted: #505F79;
+}
+
+:root {
+  --font-scale: 100%;
+  --gov-navy: #0B1F54;
+  --gov-blue: #174EA6;
+  --gov-bg: #F5F7FB;
+  --gov-saffron: #E89B24;
+  --gov-green: #13805E;
+}
+
+html {
+  font-size: var(--font-scale);
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", "Noto Sans", Helvetica, Arial, sans-serif;
+  background-color: #F5F7FB;
+  color: #0D1B2A;
+}
+
+/* High Contrast Mode */
+html.high-contrast {
+  filter: contrast(125%);
+  --gov-bg: #FFFFFF;
+}
+
+html.high-contrast body {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+/* Accessibility Skip Link */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 1rem;
+  background: #0B1F54;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  z-index: 99999;
+  font-weight: 600;
+  text-decoration: underline;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Restrained government-portal shadows */
+.gov-shadow-sm {
+  box-shadow: 0 1px 3px rgba(11, 31, 84, 0.06), 0 1px 2px rgba(11, 31, 84, 0.04);
+}
+
+.gov-shadow {
+  box-shadow: 0 3px 6px rgba(11, 31, 84, 0.07), 0 2px 4px rgba(11, 31, 84, 0.04);
+}
+
+.gov-shadow-md {
+  box-shadow: 0 6px 16px -2px rgba(11, 31, 84, 0.08), 0 3px 6px -2px rgba(11, 31, 84, 0.05);
+}
+
+.gov-shadow-lg {
+  box-shadow: 0 12px 24px -4px rgba(11, 31, 84, 0.1), 0 4px 8px -2px rgba(11, 31, 84, 0.06);
+}
+
+/* Tricolor Top Stripe (Indian Portal Characteristic) */
+.gov-tricolor-stripe {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #FF9933 0%,
+    #FF9933 33.3%,
+    #FFFFFF 33.3%,
+    #FFFFFF 66.6%,
+    #138808 66.6%,
+    #138808 100%
+  );
+}
+
+/* Focus styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #174EA6;
+  outline-offset: 2px;
+}
