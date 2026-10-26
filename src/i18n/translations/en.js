@@ -33,17 +33,16 @@ export const en = {
   "hero.description": "A unified digital platform for managing institutional security deposits, verifying Fixed Deposit Receipt (FDR) records, monitoring regulatory compliance, and tracking timely renewals across educational institutions.",
   "hero.primaryCta": "Institution Login",
   "hero.secondaryCta": "Explore Services",
-  "hero.statInstitutions": "12,400+ Institutions Covered",
-  "hero.statFdrs": "₹4,850 Cr+ Deposit Value Monitored",
-  "hero.statAccuracy": "99.8% Automated Verification Accuracy",
-
-  // Hero Illustration Labels
-  "hero.illus.institution": "Affiliated Technical Institution",
-  "hero.illus.fdr": "Fixed Deposit Receipt (Joint Account)",
-  "hero.illus.verified": "AICTE Compliance Certified",
-  "hero.illus.bank": "Scheduled Commercial Bank",
-  "hero.illus.platform": "NidhiSetu AI Engine",
-  "hero.illus.secureDoc": "Tamper-Evident Digitized FDR",
+  "hero.capabilityVerification": "AI-Assisted FDR Verification",
+  "hero.capabilityCompliance": "Regulatory Compliance Monitoring",
+  "hero.capabilityRenewals": "Smart Renewal & Risk Alerts",
+  "hero.carouselRole": "carousel",
+  "hero.carouselControls": "Hero image controls",
+  "hero.slideCampus": "Show image 1: Institutional financial security",
+  "hero.slideVerification": "Show image 2: AI-powered FDR verification",
+  "hero.slideBanking": "Show image 3: Banking and financial assurance",
+  "hero.pause": "Pause image rotation",
+  "hero.resume": "Resume image rotation",
 
   // Services Section
   "services.badge": "Core Modules",

@@ -4,15 +4,17 @@
  * If no native text layer is present (scanned PDF), signals fallback to OCR rasterization.
  */
 
+import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
+
 let pdfjsLibCache = null;
 
 async function getPdfjs() {
   if (pdfjsLibCache) return pdfjsLibCache;
   try {
     const pdfjs = await import('pdfjs-dist');
-    // Set standard worker CDN or bundled worker if available in browser
-    if (pdfjs.GlobalWorkerOptions && !pdfjs.GlobalWorkerOptions.workerSrc && typeof window !== 'undefined') {
-      pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version || '5.6.205'}/build/pdf.worker.min.mjs`;
+    // Bundle the matching worker; PDF.js's default relative URL is not served by Vite.
+    if (pdfjs.GlobalWorkerOptions && typeof window !== 'undefined') {
+      pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
     }
     pdfjsLibCache = pdfjs;
     return pdfjs;

@@ -6,6 +6,38 @@
 
 ---
 
+## Run locally
+
+Use Node.js 24 or newer, or Node.js 22.13+. From the project directory:
+
+```sh
+npm ci
+npm run dev
+```
+
+Open the local URL printed by Vite (normally http://localhost:5173).
+`npm start` also starts the development server. Opening `index.html` directly
+or using an HTML-only Live Server will not compile this React application.
+
+No environment variables, API keys, database, or backend server are required.
+Demo records initialize automatically in browser storage. Visit `/login` and
+use **Auto-Fill Demo Account** to access the institution, officer, or admin portal.
+Data is specific to the browser and origin; uploaded documents use IndexedDB.
+This is a local prototype with simulated banking and browser-side authentication.
+
+```sh
+npm test          # Automated application tests
+npm run lint      # Static checks (existing warnings are reported)
+npm run build     # Create the production dist/ directory
+npm run preview   # Serve the production build locally
+```
+
+Use localhost or HTTPS for document upload features that require Web Crypto.
+PDF extraction uses a bundled worker. Image/scanned-PDF OCR requires internet
+access on first use to download Tesseract's worker, engine, and language data;
+Google Fonts also requires internet access. Production static hosting must
+rewrite application routes to `index.html` so dashboard links work on refresh.
+
 ## 📌 Module Status Overview
 
 - ✅ **Module 01: Government-Style Public Website & Design System** — Completed
@@ -563,4 +595,3 @@ npm run dev
 2. **Strict Simulation Boundary:** Every banking message and response is synthetic. No real bank credentials, API keys, or live SFMS gateway connections exist.
 3. **Prototype Compliance Engine:** All deposit requirements and adequacy calculations are based on configured demonstration rules. They do not constitute official statutory decisions by AICTE, UGC, or state directorates.
 4. **Decoupled Module Review Decisions:** Administrative approvals (Module 03), OCR intelligence findings (Module 04), simulated bank confirmations (Module 05), and compliance case reviews (Module 06) maintain independent evidentiary states.
-

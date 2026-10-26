@@ -33,17 +33,16 @@ export const mr = {
   "hero.description": "शैक्षणिक संस्थांच्या सुरक्षा ठेव (FDR) व्यवस्थापनासाठी, नोंदींचे डिजिटल प्रमाणीकरण, नियामक अनुपालन आणि वेळेवर नूतनीकरण ट्रॅकिंगसाठी एकसंध डिजिटल व्यासपीठ.",
   "hero.primaryCta": "संस्था लॉगिन",
   "hero.secondaryCta": "सेवा एक्सप्लोर करा",
-  "hero.statInstitutions": "१२,४००+ समाविष्ट संस्था",
-  "hero.statFdrs": "₹४,८५० कोटी+ देखरेख ठेव मूल्य",
-  "hero.statAccuracy": "९९.८% स्वयंचलित पडताळणी अचूकता",
-
-  // Hero Illustration Labels
-  "hero.illus.institution": "संलग्न तांत्रिक संस्था",
-  "hero.illus.fdr": "मुदत ठेव पावती (संयुक्त खाते)",
-  "hero.illus.verified": "एआयसीटीई अनुपालन प्रमाणित",
-  "hero.illus.bank": "अनुसूचित व्यावसायिक बँक",
-  "hero.illus.platform": "निधीसेतू एआय इंजिन",
-  "hero.illus.secureDoc": "छेडछाड-मुक्त डिजिटल एफडीआर",
+  "hero.capabilityVerification": "एआय-सहाय्यित एफडीआर पडताळणी",
+  "hero.capabilityCompliance": "नियामक अनुपालन देखरेख",
+  "hero.capabilityRenewals": "स्मार्ट नूतनीकरण व जोखीम सूचना",
+  "hero.carouselRole": "चित्र कॅरोसेल",
+  "hero.carouselControls": "मुख्य चित्र नियंत्रणे",
+  "hero.slideCampus": "चित्र 1 दाखवा: संस्थात्मक आर्थिक सुरक्षा",
+  "hero.slideVerification": "चित्र 2 दाखवा: एआय-सहाय्यित एफडीआर पडताळणी",
+  "hero.slideBanking": "चित्र 3 दाखवा: बँकिंग व आर्थिक आश्वासन",
+  "hero.pause": "चित्र बदल थांबवा",
+  "hero.resume": "चित्र बदल पुन्हा सुरू करा",
 
   // Services Section
   "services.badge": "प्रमुख सेवा",

@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Main Logo & Title */}
-          <div className="flex-shrink-0 py-2">
+          <div className="min-w-0 flex-1 lg:flex-none py-2">
             <Logo />
           </div>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden">
+          <div className="flex shrink-0 lg:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

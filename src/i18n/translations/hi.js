@@ -33,17 +33,16 @@ export const hi = {
   "hero.description": "शैक्षणिक संस्थानों की सुरक्षा जमा राशि (FDR) के प्रबंधन, अभिलेखों के डिजिटल सत्यापन, विनियामक अनुपालन तथा समय पर नवीनीकरण ट्रैकिंग हेतु एक एकीकृत डिजिटल मंच।",
   "hero.primaryCta": "संस्थान लॉगिन",
   "hero.secondaryCta": "सेवाएं देखें",
-  "hero.statInstitutions": "12,400+ पंजीकृत संस्थान",
-  "hero.statFdrs": "₹4,850 करोड़+ निगरानी जमा राशि",
-  "hero.statAccuracy": "99.8% स्वचालित सत्यापन सटीकता",
-
-  // Hero Illustration Labels
-  "hero.illus.institution": "संबद्ध तकनीकी संस्थान",
-  "hero.illus.fdr": "सावधि जमा रसीद (संयुक्त खाता)",
-  "hero.illus.verified": "एआईसीटीई अनुपालन प्रमाणित",
-  "hero.illus.bank": "अनुसूचित वाणिज्यिक बैंक",
-  "hero.illus.platform": "निधिसेतु एआई इंजन",
-  "hero.illus.secureDoc": "छेड़छाड़-रहित डिजिटल एफडीआर",
+  "hero.capabilityVerification": "एआई-सहायित एफडीआर सत्यापन",
+  "hero.capabilityCompliance": "विनियामक अनुपालन निगरानी",
+  "hero.capabilityRenewals": "स्मार्ट नवीनीकरण एवं जोखिम अलर्ट",
+  "hero.carouselRole": "चित्र कैरोसेल",
+  "hero.carouselControls": "मुख्य चित्र नियंत्रण",
+  "hero.slideCampus": "चित्र 1 दिखाएँ: संस्थागत वित्तीय सुरक्षा",
+  "hero.slideVerification": "चित्र 2 दिखाएँ: एआई-सहायित एफडीआर सत्यापन",
+  "hero.slideBanking": "चित्र 3 दिखाएँ: बैंकिंग एवं वित्तीय आश्वासन",
+  "hero.pause": "चित्र परिवर्तन रोकें",
+  "hero.resume": "चित्र परिवर्तन फिर शुरू करें",
 
   // Services Section
   "services.badge": "प्रमुख सेवाएं",

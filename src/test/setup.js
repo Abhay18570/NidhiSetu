@@ -1,6 +1,15 @@
 import '@testing-library/jest-dom';
 import { webcrypto } from 'node:crypto';
 
+// Use the browser environment's storage, even when Node exposes its own
+// localStorage/sessionStorage globals (Node 25+).
+for (const key of ['localStorage', 'sessionStorage']) {
+  Object.defineProperty(globalThis, key, {
+    configurable: true,
+    value: globalThis.jsdom.window[key],
+  });
+}
+
 // Ensure standard crypto and crypto.subtle are available in test environment
 if (!globalThis.crypto) {
   globalThis.crypto = webcrypto;

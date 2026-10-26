@@ -56,7 +56,7 @@ export default function Logo({ size = 'default', showTagline = true, light = fal
       </div>
 
       {/* Text Branding */}
-      <div className="flex flex-col text-left">
+      <div className="min-w-0 flex flex-col text-left">
         <div className="flex items-baseline gap-2">
           <span className={`font-extrabold tracking-tight ${isSmall ? 'text-lg' : 'text-xl'} ${light ? 'text-white' : 'text-[#0B1F54]'}`}>
             NidhiSetu
