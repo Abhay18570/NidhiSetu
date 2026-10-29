@@ -103,7 +103,7 @@ export default function AdminSettingsPage() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
+          className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
         >
           <div className="bg-white rounded-xl border border-[#D3DDEB] max-w-md w-full p-6 gov-shadow-lg space-y-4">
             <div className="flex items-center gap-3 text-rose-600">

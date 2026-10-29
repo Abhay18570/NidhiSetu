@@ -82,7 +82,7 @@ export default function OfficerPortfolioAnalyticsPage() {
       <div className="bg-[#0B1F54] text-white rounded-xl p-6 shadow-md border border-[#162E73] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#13805E] text-white uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded text-[0.6875rem] font-bold bg-[#13805E] text-white uppercase tracking-wider">
               Portfolio Intelligence
             </span>
             <span className="text-xs text-slate-300 font-mono">
@@ -128,7 +128,7 @@ export default function OfficerPortfolioAnalyticsPage() {
           <div className="text-2xl font-bold text-slate-900 mt-1">
             {trendData?.totals?.submissions || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-0.5">In selected period ({dateRange})</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-0.5">In selected period ({dateRange})</div>
         </Card>
 
         <Card className="p-4">
@@ -136,7 +136,7 @@ export default function OfficerPortfolioAnalyticsPage() {
           <div className="text-2xl font-bold text-emerald-700 mt-1">
             {trendData?.totals?.reviewsCompleted || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-0.5">Scrutiny determinations</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-0.5">Scrutiny determinations</div>
         </Card>
 
         <Card className="p-4">
@@ -144,7 +144,7 @@ export default function OfficerPortfolioAnalyticsPage() {
           <div className="text-2xl font-bold text-blue-700 mt-1">
             {trendData?.totals?.renewalsSubmitted || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-0.5">Continuity requests</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-0.5">Continuity requests</div>
         </Card>
 
         <Card className="p-4">
@@ -152,7 +152,7 @@ export default function OfficerPortfolioAnalyticsPage() {
           <div className="text-2xl font-bold text-purple-700 mt-1">
             {trendData?.totals?.simulatedBankResponses || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-0.5">[SIMULATED] Responses</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-0.5">[SIMULATED] Responses</div>
         </Card>
       </div>
 
@@ -163,7 +163,7 @@ export default function OfficerPortfolioAnalyticsPage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Maturity Horizon Exposure</h2>
-              <p className="text-[11px] text-slate-500">Upcoming deposit maturity buckets</p>
+              <p className="text-[0.6875rem] text-slate-500">Upcoming deposit maturity buckets</p>
             </div>
             <Clock className="w-4 h-4 text-slate-400" />
           </div>
@@ -201,7 +201,7 @@ export default function OfficerPortfolioAnalyticsPage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Simulated Bank Verification Outcomes</h2>
-              <p className="text-[11px] text-slate-500">[SIMULATED] Mock SFMS / CBS status distribution</p>
+              <p className="text-[0.6875rem] text-slate-500">[SIMULATED] Mock SFMS / CBS status distribution</p>
             </div>
             <Landmark className="w-4 h-4 text-slate-400" />
           </div>
@@ -231,7 +231,7 @@ export default function OfficerPortfolioAnalyticsPage() {
               );
             })}
           </div>
-          <div className="mt-4 p-2.5 rounded bg-slate-50 border text-[11px] text-slate-600">
+          <div className="mt-4 p-2.5 rounded bg-slate-50 border text-[0.6875rem] text-slate-600">
             Note: All banking figures are synthetic demonstration records generated through NidhiSetu Bank Registry.
           </div>
         </Card>
@@ -242,7 +242,7 @@ export default function OfficerPortfolioAnalyticsPage() {
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div>
             <h2 className="text-sm font-bold text-slate-900">Daily Submission & Review Activity</h2>
-            <p className="text-[11px] text-slate-500">Based on authentic record timestamps</p>
+            <p className="text-[0.6875rem] text-slate-500">Based on authentic record timestamps</p>
           </div>
           <BarChart2 className="w-4 h-4 text-slate-400" />
         </div>
@@ -253,12 +253,12 @@ export default function OfficerPortfolioAnalyticsPage() {
           </div>
         ) : (
           <div className="mt-4 overflow-x-auto">
-            <div className="flex items-end gap-2 h-40 pt-6 px-2 min-w-[500px]">
+            <div className="flex items-end gap-2 h-40 pt-6 px-2 min-w-[31.25rem]">
               {trendData.timeline.slice(-14).map((bucket) => {
                 const height = Math.min(100, (bucket.submissions + bucket.reviewsCompleted) * 20);
                 return (
                   <div key={bucket.date} className="flex-1 flex flex-col items-center gap-1 group">
-                    <div className="text-[9px] font-bold text-slate-600 group-hover:text-blue-700">
+                    <div className="text-[0.5625rem] font-bold text-slate-600 group-hover:text-blue-700">
                       {bucket.submissions + bucket.reviewsCompleted}
                     </div>
                     <div className="w-full bg-slate-100 rounded-t h-28 flex items-end justify-center">
@@ -267,7 +267,7 @@ export default function OfficerPortfolioAnalyticsPage() {
                         style={{ height: `${Math.max(4, height)}%` }}
                       />
                     </div>
-                    <div className="text-[9px] text-slate-400 rotate-45 mt-2 origin-left">
+                    <div className="text-[0.5625rem] text-slate-400 rotate-45 mt-2 origin-left">
                       {bucket.date.slice(5)}
                     </div>
                   </div>

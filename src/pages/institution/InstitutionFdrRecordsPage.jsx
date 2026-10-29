@@ -148,9 +148,9 @@ export default function InstitutionFdrRecordsPage() {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         <Card className="p-4 flex items-center justify-between">
           <div>
-            <div className="text-[11px] text-[#505F79] font-semibold uppercase">Total FDR Records</div>
+            <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">Total FDR Records</div>
             <div className="text-2xl font-black text-[#0B1F54] mt-0.5">{stats.totalRecords}</div>
-            <div className="text-[11px] text-slate-400">Registered Files</div>
+            <div className="text-[0.6875rem] text-slate-400">Registered Files</div>
           </div>
           <div className="w-10 h-10 rounded-xl bg-[#E8F0FE] text-[#174EA6] flex items-center justify-center shrink-0">
             <FileText className="w-5 h-5" />
@@ -159,11 +159,11 @@ export default function InstitutionFdrRecordsPage() {
 
         <Card className="p-4 flex items-center justify-between">
           <div>
-            <div className="text-[11px] text-[#505F79] font-semibold uppercase">Accepted Deposit Value</div>
+            <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">Accepted Deposit Value</div>
             <div className="text-xl sm:text-2xl font-black text-[#13805E] mt-0.5">
               {formatINR(stats.totalDepositPaise, true)}
             </div>
-            <div className="text-[11px] text-slate-400">Self-Declared Value</div>
+            <div className="text-[0.6875rem] text-slate-400">Self-Declared Value</div>
           </div>
           <div className="w-10 h-10 rounded-xl bg-emerald-50 text-[#13805E] flex items-center justify-center shrink-0">
             <ShieldCheck className="w-5 h-5" />
@@ -172,11 +172,11 @@ export default function InstitutionFdrRecordsPage() {
 
         <Card className="p-4 flex items-center justify-between">
           <div>
-            <div className="text-[11px] text-[#505F79] font-semibold uppercase">In Scrutiny / Review</div>
+            <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">In Scrutiny / Review</div>
             <div className="text-2xl font-black text-[#174EA6] mt-0.5">
               {stats.underReview + stats.submitted}
             </div>
-            <div className="text-[11px] text-slate-400">With AICTE Officers</div>
+            <div className="text-[0.6875rem] text-slate-400">With AICTE Officers</div>
           </div>
           <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#174EA6] flex items-center justify-center shrink-0">
             <Clock className="w-5 h-5" />
@@ -185,11 +185,11 @@ export default function InstitutionFdrRecordsPage() {
 
         <Card className="p-4 flex items-center justify-between">
           <div>
-            <div className="text-[11px] text-[#505F79] font-semibold uppercase">Upcoming Renewals</div>
+            <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">Upcoming Renewals</div>
             <div className="text-2xl font-black text-[#C67C11] mt-0.5">
               {stats.upcomingMaturities}
             </div>
-            <div className="text-[11px] text-slate-400">Matures in &le; 90 Days</div>
+            <div className="text-[0.6875rem] text-slate-400">Matures in &le; 90 Days</div>
           </div>
           <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#C67C11] flex items-center justify-center shrink-0">
             <RotateCcw className="w-5 h-5" />
@@ -296,7 +296,7 @@ export default function InstitutionFdrRecordsPage() {
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#0B1F54] text-white uppercase text-[10px] tracking-wider">
+              <thead className="bg-[#0B1F54] text-white uppercase text-[0.625rem] tracking-wider">
                 <tr>
                   <th className="px-4 py-3.5">Reference #</th>
                   <th className="px-3 py-3.5">Bank & Branch</th>
@@ -327,7 +327,7 @@ export default function InstitutionFdrRecordsPage() {
                       </td>
                       <td className="px-3 py-3.5">
                         <div className="font-bold text-[#0B1F54]">{fdr.bankName}</div>
-                        <div className="text-[11px] text-[#505F79]">{fdr.branchName || 'Main Branch'}</div>
+                        <div className="text-[0.6875rem] text-[#505F79]">{fdr.branchName || 'Main Branch'}</div>
                       </td>
                       <td className="px-3 py-3.5 font-mono text-slate-600">
                         {maskFdrNumber(fdr.fdrNumber)}
@@ -336,7 +336,7 @@ export default function InstitutionFdrRecordsPage() {
                         <div className="font-bold text-sm text-[#13805E]">
                           {formatINR(fdr.depositAmountPaise, true)}
                         </div>
-                        <div className="text-[10px] text-slate-400">@ {fdr.interestRate || '7.1'}% p.a.</div>
+                        <div className="text-[0.625rem] text-slate-400">@ {fdr.interestRate || '7.1'}% p.a.</div>
                       </td>
                       <td className="px-3 py-3.5">
                         <div className="font-medium text-slate-600">
@@ -344,7 +344,7 @@ export default function InstitutionFdrRecordsPage() {
                         </div>
                         <div className="mt-1">
                           <span
-                            className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold border ${maturityBadge.colorClass}`}
+                            className={`inline-flex items-center px-1.5 py-0.5 rounded text-[0.625rem] font-semibold border ${maturityBadge.colorClass}`}
                           >
                             {maturityBadge.label}
                           </span>

@@ -62,7 +62,7 @@ export default function InstitutionApplicationsPage() {
           <span className="font-bold text-xs text-[#0B1F54] uppercase tracking-wider">
             Active Submissions ({sampleApplications.length})
           </span>
-          <span className="text-[11px] text-slate-500 font-mono">
+          <span className="text-[0.6875rem] text-slate-500 font-mono">
             AISHE: {currentInstitution?.aisheCode || 'N/A'}
           </span>
         </div>
@@ -84,7 +84,7 @@ export default function InstitutionApplicationsPage() {
 
                 <div className="text-left sm:text-right space-y-1 shrink-0">
                   <div className="text-sm font-extrabold text-[#13805E]">{app.amount}</div>
-                  <div className="text-[11px] font-semibold text-slate-500 flex items-center sm:justify-end gap-1">
+                  <div className="text-[0.6875rem] font-semibold text-slate-500 flex items-center sm:justify-end gap-1">
                     <Clock className="w-3.5 h-3.5 text-[#E89B24]" />
                     <span>{app.stage}</span>
                   </div>

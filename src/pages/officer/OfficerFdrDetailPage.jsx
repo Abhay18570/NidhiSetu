@@ -310,7 +310,7 @@ export default function OfficerFdrDetailPage() {
             <CheckCircle2 className="w-4 h-4 text-[#13805E] shrink-0 mt-0.5" />
             <div>
               <div className="font-bold text-[#0B1F54]">Commercial Bank & IFSC</div>
-              <div className="text-[11px] text-[#505F79] font-mono">{fdr.bankName} &bull; {fdr.ifsc}</div>
+              <div className="text-[0.6875rem] text-[#505F79] font-mono">{fdr.bankName} &bull; {fdr.ifsc}</div>
             </div>
           </div>
 
@@ -318,7 +318,7 @@ export default function OfficerFdrDetailPage() {
             <CheckCircle2 className="w-4 h-4 text-[#13805E] shrink-0 mt-0.5" />
             <div>
               <div className="font-bold text-[#0B1F54]">Certificate & Joint Lien</div>
-              <div className="text-[11px] text-[#505F79] font-mono">#{fdr.fdrNumber}</div>
+              <div className="text-[0.6875rem] text-[#505F79] font-mono">#{fdr.fdrNumber}</div>
             </div>
           </div>
 
@@ -326,7 +326,7 @@ export default function OfficerFdrDetailPage() {
             <CheckCircle2 className="w-4 h-4 text-[#13805E] shrink-0 mt-0.5" />
             <div>
               <div className="font-bold text-[#0B1F54]">Deposit Value & Dates</div>
-              <div className="text-[11px] text-[#13805E] font-bold">
+              <div className="text-[0.6875rem] text-[#13805E] font-bold">
                 {formatINR(fdr.depositAmountPaise, true)} ({fdr.depositDate} &rarr; {fdr.maturityDate})
               </div>
             </div>
@@ -417,12 +417,12 @@ export default function OfficerFdrDetailPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
             <div>
               <div className="font-bold text-[#0B1F54]">{fdr.fileName || 'FDR_Certificate.pdf'}</div>
-              <div className="text-[11px] text-slate-500 font-mono mt-0.5">
+              <div className="text-[0.6875rem] text-slate-500 font-mono mt-0.5">
                 Type: {fdr.fileType || 'application/pdf'} &bull; Size: {(fdr.fileSize / (1024 * 1024)).toFixed(2)} MB
               </div>
             </div>
 
-            <div className="p-2.5 bg-[#F5F7FB] border border-[#D3DDEB] rounded-lg font-mono text-[11px] text-slate-600 truncate max-w-md">
+            <div className="p-2.5 bg-[#F5F7FB] border border-[#D3DDEB] rounded-lg font-mono text-[0.6875rem] text-slate-600 truncate max-w-md">
               <span className="font-bold text-[#0B1F54]">SHA-256 Digest: </span>
               <span>{fdr.sha256Hash || 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'}</span>
             </div>
@@ -443,7 +443,7 @@ export default function OfficerFdrDetailPage() {
           <div className="space-y-4 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
             {events.map((ev) => (
               <div key={ev.id} className="relative flex items-start gap-4 text-xs">
-                <div className="w-7 h-7 rounded-full bg-white border-2 border-[#174EA6] text-[#174EA6] flex items-center justify-center shrink-0 z-10 font-bold text-[10px]">
+                <div className="w-7 h-7 rounded-full bg-white border-2 border-[#174EA6] text-[#174EA6] flex items-center justify-center shrink-0 z-10 font-bold text-[0.625rem]">
                   ✓
                 </div>
                 <div className="bg-[#F5F7FB] border border-[#D3DDEB] rounded-xl p-3 flex-1 space-y-1">
@@ -451,15 +451,15 @@ export default function OfficerFdrDetailPage() {
                     <span className="font-bold text-[#0B1F54]">
                       Status: <span className="text-[#174EA6]">{ev.newStatus}</span>
                     </span>
-                    <span className="text-[10px] text-slate-400 font-mono">
+                    <span className="text-[0.625rem] text-slate-400 font-mono">
                       {new Date(ev.timestamp).toLocaleString()}
                     </span>
                   </div>
-                  <div className="text-[11px] text-slate-600">
+                  <div className="text-[0.6875rem] text-slate-600">
                     Actioned by: <strong>{ev.actorName || ev.actorRole}</strong> ({ev.actorRole})
                   </div>
                   {(ev.notes || ev.reason) && (
-                    <div className="mt-1 text-[11px] text-slate-700 bg-white p-2 rounded border border-slate-200 leading-relaxed">
+                    <div className="mt-1 text-[0.6875rem] text-slate-700 bg-white p-2 rounded border border-slate-200 leading-relaxed">
                       {ev.reason ? `Reason: ${ev.reason}` : ev.notes}
                     </div>
                   )}
@@ -475,7 +475,7 @@ export default function OfficerFdrDetailPage() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in"
+          className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in"
         >
           <div className="bg-white rounded-2xl border border-[#D3DDEB] max-w-lg w-full p-6 gov-shadow-xl space-y-4">
             <div className="flex items-center gap-3">

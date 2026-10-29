@@ -297,7 +297,7 @@ export default function InstitutionRenewalsPage() {
                     <tr key={plan.planId} className="hover:bg-blue-50/30 transition">
                       <td className="px-4 py-3.5">
                         <div className="font-semibold text-gray-900">{plan.fdrNumber}</div>
-                        <div className="text-[11px] text-gray-500">ID: {plan.fdrId}</div>
+                        <div className="text-[0.6875rem] text-gray-500">ID: {plan.fdrId}</div>
                       </td>
 
                       <td className="px-4 py-3.5 font-medium text-gray-800">
@@ -306,7 +306,7 @@ export default function InstitutionRenewalsPage() {
 
                       <td className="px-4 py-3.5">
                         <span
-                          className={`inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold ${
+                          className={`inline-flex items-center px-2 py-0.5 rounded-full text-[0.6875rem] font-semibold ${
                             plan.daysUntilMaturity < 0
                               ? 'bg-rose-100 text-rose-800'
                               : plan.daysUntilMaturity <= 7
@@ -324,7 +324,7 @@ export default function InstitutionRenewalsPage() {
 
                       <td className="px-4 py-3.5">
                         <span
-                          className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold ${
+                          className={`inline-flex items-center px-2 py-0.5 rounded text-[0.6875rem] font-semibold ${
                             plan.renewalSubmissionStatus === RENEWAL_STATUS.ACCEPTED_FOR_RECORD
                               ? 'bg-emerald-100 text-emerald-800'
                               : plan.renewalSubmissionStatus === RENEWAL_STATUS.CLARIFICATION_REQUIRED
@@ -410,7 +410,7 @@ export default function InstitutionRenewalsPage() {
 
       {/* Clarification Reply Modal */}
       {clarificationModalOpen && activeRequest && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="app-modal fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-xl max-w-lg w-full p-5 border border-gray-200 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-gray-200">
               <h3 className="text-base font-bold text-[#0B1F54] flex items-center gap-2">

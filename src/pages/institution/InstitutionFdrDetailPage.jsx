@@ -350,7 +350,7 @@ export default function InstitutionFdrDetailPage() {
               <span className="font-mono font-bold text-[#0B1F54]">{fdr.fdrNumber}</span>
             </div>
             <div className="border-t border-slate-100 pt-2">
-              <span className="text-slate-500 block text-[11px]">Joint Account Title:</span>
+              <span className="text-slate-500 block text-[0.6875rem]">Joint Account Title:</span>
               <span className="font-semibold text-[#0B1F54] mt-0.5 block">{fdr.accountHolderName}</span>
             </div>
           </div>
@@ -383,7 +383,7 @@ export default function InstitutionFdrDetailPage() {
               <span className="font-bold text-[#0B1F54]">{fdr.maturityDate}</span>
             </div>
             <div className="border-t border-slate-100 pt-2">
-              <span className="text-slate-500 block text-[11px]">Regulatory Requirement:</span>
+              <span className="text-slate-500 block text-[0.6875rem]">Regulatory Requirement:</span>
               <span className="font-semibold text-[#0B1F54] mt-0.5 block">
                 {fdr.applicableSecurityRequirement || 'General Security Deposit'}
               </span>
@@ -408,12 +408,12 @@ export default function InstitutionFdrDetailPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
             <div>
               <div className="font-bold text-[#0B1F54]">{fdr.fileName || 'Deposit_Scan.pdf'}</div>
-              <div className="text-[11px] text-slate-500 font-mono mt-0.5">
+              <div className="text-[0.6875rem] text-slate-500 font-mono mt-0.5">
                 Type: {fdr.fileType || 'application/pdf'} &bull; Size: {(fdr.fileSize / (1024 * 1024)).toFixed(2)} MB
               </div>
             </div>
 
-            <div className="p-2.5 bg-[#F5F7FB] border border-[#D3DDEB] rounded-lg font-mono text-[11px] text-slate-600 truncate max-w-md">
+            <div className="p-2.5 bg-[#F5F7FB] border border-[#D3DDEB] rounded-lg font-mono text-[0.6875rem] text-slate-600 truncate max-w-md">
               <span className="font-bold text-[#0B1F54]">SHA-256: </span>
               <span>{fdr.sha256Hash || 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'}</span>
             </div>
@@ -436,7 +436,7 @@ export default function InstitutionFdrDetailPage() {
               Simulated commercial bank deposit confirmation and statutory lien verification status.
             </p>
           </div>
-          <span className="text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-[0.625rem] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full uppercase tracking-wider">
             {SIMULATION_DISCLAIMER}
           </span>
         </div>
@@ -445,15 +445,15 @@ export default function InstitutionFdrDetailPage() {
           <div className="space-y-3 text-xs">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
               <div>
-                <span className="text-slate-400 block text-[10px] uppercase font-bold">Inquiry Ref</span>
+                <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Inquiry Ref</span>
                 <span className="font-mono font-bold text-[#174EA6]">{bankVerification.requestReference}</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-[10px] uppercase font-bold">Confirmation Status</span>
+                <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Confirmation Status</span>
                 <span className="font-bold text-slate-800">{bankVerification.requestStatus}</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-[10px] uppercase font-bold">Last Simulated Response</span>
+                <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Last Simulated Response</span>
                 <span className="font-mono text-slate-600">
                   {bankVerification.simulationResponse?.responseTimestamp
                     ? new Date(bankVerification.simulationResponse.responseTimestamp).toLocaleDateString()
@@ -466,7 +466,7 @@ export default function InstitutionFdrDetailPage() {
             <div className="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-white">
               <div>
                 <span className="font-bold text-[#0B1F54] block">General Verification Outcome:</span>
-                <span className="text-slate-600 text-[11px]">
+                <span className="text-slate-600 text-[0.6875rem]">
                   {bankVerification.summaryScorecard?.verificationVerdict === 'CONSISTENT_WITH_SIMULATION'
                     ? 'Simulated bank records and lien endorsement are consistent with declared instrument parameters.'
                     : bankVerification.summaryScorecard?.verificationVerdict === 'DISCREPANCIES_DETECTED'
@@ -497,7 +497,7 @@ export default function InstitutionFdrDetailPage() {
                 <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-bold block">Follow-Up Requested by Scrutiny Authority</span>
-                  <p className="mt-0.5 text-[11px] leading-relaxed">
+                  <p className="mt-0.5 text-[0.6875rem] leading-relaxed">
                     The regulatory scrutiny officer has requested clarification regarding bank confirmation details.
                     Please check for official communication or submit revised documents if requested.
                   </p>
@@ -525,7 +525,7 @@ export default function InstitutionFdrDetailPage() {
           <div className="space-y-4 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-200">
             {events.map((ev) => (
               <div key={ev.id} className="relative flex items-start gap-4 text-xs">
-                <div className="w-7 h-7 rounded-full bg-white border-2 border-[#174EA6] text-[#174EA6] flex items-center justify-center shrink-0 z-10 font-bold text-[10px]">
+                <div className="w-7 h-7 rounded-full bg-white border-2 border-[#174EA6] text-[#174EA6] flex items-center justify-center shrink-0 z-10 font-bold text-[0.625rem]">
                   ✓
                 </div>
                 <div className="bg-[#F5F7FB] border border-[#D3DDEB] rounded-xl p-3 flex-1 space-y-1">
@@ -533,15 +533,15 @@ export default function InstitutionFdrDetailPage() {
                     <span className="font-bold text-[#0B1F54]">
                       Status Transition: <span className="text-[#174EA6]">{ev.newStatus}</span>
                     </span>
-                    <span className="text-[10px] text-slate-400 font-mono">
+                    <span className="text-[0.625rem] text-slate-400 font-mono">
                       {new Date(ev.timestamp).toLocaleString()}
                     </span>
                   </div>
-                  <div className="text-[11px] text-slate-600">
+                  <div className="text-[0.6875rem] text-slate-600">
                     Actioned by: <strong>{ev.actorName || ev.actorRole}</strong> ({ev.actorRole})
                   </div>
                   {(ev.notes || ev.reason) && (
-                    <div className="mt-1 text-[11px] text-slate-700 bg-white p-2 rounded border border-slate-200 leading-relaxed">
+                    <div className="mt-1 text-[0.6875rem] text-slate-700 bg-white p-2 rounded border border-slate-200 leading-relaxed">
                       {ev.reason ? `Reason: ${ev.reason}` : ev.notes}
                     </div>
                   )}

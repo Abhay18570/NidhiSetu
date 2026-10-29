@@ -161,7 +161,7 @@ export default function AdminDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Total FDR Records</div>
             <div className="text-2xl font-black text-[#0B1F54] mt-1">{fdrStats.totalFDRCount}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Across All Institutions</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">Across All Institutions</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-[#E8F0FE] text-[#174EA6] flex items-center justify-center shrink-0">
             <FileSpreadsheet className="w-6 h-6" />
@@ -174,7 +174,7 @@ export default function AdminDashboard() {
             <div className="text-2xl font-black text-[#13805E] mt-1">
               {formatINR(fdrStats.totalDeclaredDepositPaise)}
             </div>
-            <div className="text-[11px] text-amber-600 font-medium mt-0.5">Self-Reported Prototype Value</div>
+            <div className="text-[0.6875rem] text-amber-600 font-medium mt-0.5">Self-Reported Prototype Value</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-[#E6F4EA] text-[#13805E] flex items-center justify-center shrink-0">
             <IndianRupee className="w-6 h-6" />
@@ -185,7 +185,7 @@ export default function AdminDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Upcoming Maturities</div>
             <div className="text-2xl font-black text-[#E89B24] mt-1">{fdrStats.upcomingMaturitiesTotal}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Expiring ≤ 90 Days</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">Expiring ≤ 90 Days</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-[#FEF7EC] text-[#E89B24] flex items-center justify-center shrink-0">
             <Clock className="w-6 h-6" />
@@ -196,7 +196,7 @@ export default function AdminDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Audit Trail Stream</div>
             <div className="text-2xl font-black text-[#0B1F54] mt-1">{auditCount}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Recorded Events</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">Recorded Events</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-slate-100 text-[#0B1F54] flex items-center justify-center shrink-0">
             <ScrollText className="w-6 h-6" />
@@ -214,31 +214,31 @@ export default function AdminDashboard() {
             <div className="text-lg font-black text-[#174EA6]">
               {fdrStats.statusCounts[FDR_STATUS.SUBMITTED] || 0}
             </div>
-            <div className="text-[11px] font-semibold text-[#505F79] uppercase mt-0.5">Submitted</div>
+            <div className="text-[0.6875rem] font-semibold text-[#505F79] uppercase mt-0.5">Submitted</div>
           </div>
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
             <div className="text-lg font-black text-indigo-700">
               {fdrStats.statusCounts[FDR_STATUS.UNDER_REVIEW] || 0}
             </div>
-            <div className="text-[11px] font-semibold text-[#505F79] uppercase mt-0.5">Under Review</div>
+            <div className="text-[0.6875rem] font-semibold text-[#505F79] uppercase mt-0.5">Under Review</div>
           </div>
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
             <div className="text-lg font-black text-amber-600">
               {fdrStats.statusCounts[FDR_STATUS.CLARIFICATION_REQUIRED] || 0}
             </div>
-            <div className="text-[11px] font-semibold text-[#505F79] uppercase mt-0.5">Clarification</div>
+            <div className="text-[0.6875rem] font-semibold text-[#505F79] uppercase mt-0.5">Clarification</div>
           </div>
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
             <div className="text-lg font-black text-[#13805E]">
               {fdrStats.statusCounts[FDR_STATUS.REVIEW_ACCEPTED] || 0}
             </div>
-            <div className="text-[11px] font-semibold text-[#505F79] uppercase mt-0.5">Accepted</div>
+            <div className="text-[0.6875rem] font-semibold text-[#505F79] uppercase mt-0.5">Accepted</div>
           </div>
           <div className="bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
             <div className="text-lg font-black text-[#C5221F]">
               {fdrStats.statusCounts[FDR_STATUS.REVIEW_REJECTED] || 0}
             </div>
-            <div className="text-[11px] font-semibold text-[#505F79] uppercase mt-0.5">Rejected</div>
+            <div className="text-[0.6875rem] font-semibold text-[#505F79] uppercase mt-0.5">Rejected</div>
           </div>
         </div>
       </Card>
@@ -260,7 +260,7 @@ export default function AdminDashboard() {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[10px]">
+            <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[0.625rem]">
               <tr>
                 <th className="px-4 py-3">Institution Name</th>
                 <th className="px-3 py-3">AISHE Code</th>
@@ -310,7 +310,7 @@ export default function AdminDashboard() {
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[10px]">
+                <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[0.625rem]">
                   <tr>
                     <th className="px-4 py-3">User Name</th>
                     <th className="px-3 py-3">Role</th>
@@ -323,10 +323,10 @@ export default function AdminDashboard() {
                     <tr key={u.id} className="hover:bg-slate-50">
                       <td className="px-4 py-3">
                         <div className="font-bold">{u.name}</div>
-                        <div className="text-[11px] text-[#505F79]">{u.designation}</div>
+                        <div className="text-[0.6875rem] text-[#505F79]">{u.designation}</div>
                       </td>
                       <td className="px-3 py-3">
-                        <span className="font-mono uppercase font-bold text-[#174EA6] text-[11px]">
+                        <span className="font-mono uppercase font-bold text-[#174EA6] text-[0.6875rem]">
                           {u.role}
                         </span>
                       </td>
@@ -358,7 +358,7 @@ export default function AdminDashboard() {
                 className="block p-3 rounded-lg bg-[#F5F7FB] border border-[#D3DDEB] hover:border-[#174EA6] transition-colors"
               >
                 <div className="font-bold text-[#0B1F54]">User Role Governance</div>
-                <div className="text-[#505F79] text-[11px] mt-0.5">Activate or deactivate institution and officer seats.</div>
+                <div className="text-[#505F79] text-[0.6875rem] mt-0.5">Activate or deactivate institution and officer seats.</div>
               </Link>
 
               <Link
@@ -366,7 +366,7 @@ export default function AdminDashboard() {
                 className="block p-3 rounded-lg bg-[#F5F7FB] border border-[#D3DDEB] hover:border-[#174EA6] transition-colors"
               >
                 <div className="font-bold text-[#0B1F54]">Inspection Audit Trail</div>
-                <div className="text-[#505F79] text-[11px] mt-0.5">Review chronological authentication & profile logs.</div>
+                <div className="text-[#505F79] text-[0.6875rem] mt-0.5">Review chronological authentication & profile logs.</div>
               </Link>
 
               <Link
@@ -374,7 +374,7 @@ export default function AdminDashboard() {
                 className="block p-3 rounded-lg bg-[#F5F7FB] border border-[#D3DDEB] hover:border-[#174EA6] transition-colors"
               >
                 <div className="font-bold text-[#0B1F54]">Demo State & Storage Reset</div>
-                <div className="text-[#505F79] text-[11px] mt-0.5">Restore deterministic synthetic seed data.</div>
+                <div className="text-[#505F79] text-[0.6875rem] mt-0.5">Restore deterministic synthetic seed data.</div>
               </Link>
             </div>
           </Card>

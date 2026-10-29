@@ -16,7 +16,7 @@ export default function HeroSection() {
     <HeroCarousel>
       <div className="hero-content">
         <div className="hero-badge">
-          <ShieldCheck size={16} aria-hidden="true" />
+          <ShieldCheck className="w-4 h-4" aria-hidden="true" />
           <span>{t('hero.badge')}</span>
         </div>
         <h1 id="home-hero-heading">{t('hero.heading')}</h1>
@@ -32,7 +32,7 @@ export default function HeroSection() {
         <ul className="hero-capabilities">
           {capabilities.map(({ key, icon: Icon }) => (
             <li key={key}>
-              <Icon size={20} aria-hidden="true" />
+              <Icon className="w-5 h-5" aria-hidden="true" />
               <span>{t(key)}</span>
             </li>
           ))}

@@ -139,7 +139,7 @@ export default function InstitutionNotificationsPage() {
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-sm text-[#0B1F54]">{item.title}</span>
                       {!item.isRead && (
-                        <span className="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold bg-[#174EA6] text-white">
+                        <span className="px-1.5 py-0.5 rounded text-[0.625rem] uppercase font-bold bg-[#174EA6] text-white">
                           New
                         </span>
                       )}
@@ -147,7 +147,7 @@ export default function InstitutionNotificationsPage() {
                     <p className="text-xs text-[#505F79] leading-relaxed max-w-2xl">
                       {item.message}
                     </p>
-                    <span className="text-[10px] text-slate-400 block pt-1">
+                    <span className="text-[0.625rem] text-slate-400 block pt-1">
                       Received on {new Date(item.createdAt).toLocaleString()}
                     </span>
                   </div>

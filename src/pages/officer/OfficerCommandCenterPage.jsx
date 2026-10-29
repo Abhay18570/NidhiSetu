@@ -131,7 +131,7 @@ export default function OfficerCommandCenterPage() {
       <div className="bg-[#0B1F54] text-white rounded-xl p-6 shadow-md border border-[#162E73] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded text-[0.6875rem] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
               Module 08
             </span>
             <span className="text-xs text-slate-300 font-mono">
@@ -191,7 +191,7 @@ export default function OfficerCommandCenterPage() {
           <div className="text-2xl font-bold text-slate-900">
             {metrics?.totalInstitutionsCount || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">Under regulatory surveillance</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-1">Under regulatory surveillance</div>
         </div>
 
         {/* KPI 2 */}
@@ -206,7 +206,7 @@ export default function OfficerCommandCenterPage() {
           <div className="text-2xl font-bold text-slate-900">
             {metrics?.pendingAdministrativeReviewsCount || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">Awaiting scrutiny decisions</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-1">Awaiting scrutiny decisions</div>
         </div>
 
         {/* KPI 3 */}
@@ -221,7 +221,7 @@ export default function OfficerCommandCenterPage() {
           <div className="text-2xl font-bold text-red-700">
             {riskCounts[RISK_PRIORITY.CRITICAL] || 0}
           </div>
-          <div className="text-[11px] text-red-600 mt-1">Immediate action required</div>
+          <div className="text-[0.6875rem] text-red-600 mt-1">Immediate action required</div>
         </div>
 
         {/* KPI 4 */}
@@ -236,7 +236,7 @@ export default function OfficerCommandCenterPage() {
           <div className="text-xl font-bold text-slate-900">
             ₹{((metrics?.totalShortfallPaise || 0) / 100).toLocaleString('en-IN')}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             {metrics?.institutionsWithShortfallCount || 0} institution(s) in deficit
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function OfficerCommandCenterPage() {
           <div className="text-2xl font-bold text-slate-900">
             {(metrics?.maturitySchedule?.['0-7_DAYS'] || 0) + (metrics?.maturitySchedule?.['8-30_DAYS'] || 0)}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">Maturity within 30 days</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-1">Maturity within 30 days</div>
         </div>
 
         {/* KPI 6 */}
@@ -268,7 +268,7 @@ export default function OfficerCommandCenterPage() {
           <div className="text-2xl font-bold text-slate-900">
             {metrics?.openComplianceCasesCount || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">Active regulatory inquiries</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-1">Active regulatory inquiries</div>
         </div>
       </div>
 
@@ -279,7 +279,7 @@ export default function OfficerCommandCenterPage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Portfolio Risk Distribution</h2>
-              <p className="text-[11px] text-slate-500">Explainable operational priority</p>
+              <p className="text-[0.6875rem] text-slate-500">Explainable operational priority</p>
             </div>
             <ShieldAlert className="w-4 h-4 text-slate-400" />
           </div>
@@ -313,7 +313,7 @@ export default function OfficerCommandCenterPage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h2 className="text-sm font-bold text-slate-900">FDR Lifecycle Distribution</h2>
-              <p className="text-[11px] text-slate-500">Total {metrics?.totalFdrsCount || 0} deposits cataloged</p>
+              <p className="text-[0.6875rem] text-slate-500">Total {metrics?.totalFdrsCount || 0} deposits cataloged</p>
             </div>
             <FileCheck2 className="w-4 h-4 text-slate-400" />
           </div>
@@ -338,7 +338,7 @@ export default function OfficerCommandCenterPage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Maturity Exposure Schedule</h2>
-              <p className="text-[11px] text-slate-500">Renewal countdown timeline</p>
+              <p className="text-[0.6875rem] text-slate-500">Renewal countdown timeline</p>
             </div>
             <Clock className="w-4 h-4 text-slate-400" />
           </div>
@@ -352,7 +352,7 @@ export default function OfficerCommandCenterPage() {
             ].map((win, idx) => (
               <div key={idx} className="flex items-center justify-between text-xs p-2 rounded hover:bg-slate-50">
                 <span className="text-slate-700 font-medium">{win.label}</span>
-                <span className={`px-2 py-0.5 rounded text-[11px] font-bold ${win.badge}`}>
+                <span className={`px-2 py-0.5 rounded text-[0.6875rem] font-bold ${win.badge}`}>
                   {win.count}
                 </span>
               </div>
@@ -369,7 +369,7 @@ export default function OfficerCommandCenterPage() {
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div>
                 <h2 className="text-sm font-bold text-slate-900">High-Priority Operational Alerts</h2>
-                <p className="text-[11px] text-slate-500">Cross-module flags requiring regulatory intervention</p>
+                <p className="text-[0.6875rem] text-slate-500">Cross-module flags requiring regulatory intervention</p>
               </div>
               <Link
                 to="/officer/action-inbox"
@@ -388,13 +388,13 @@ export default function OfficerCommandCenterPage() {
                   <div key={alert.id || alert.alertId} className="py-3 flex items-start justify-between gap-3">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
-                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${alert.severity === 'CRITICAL' ? 'bg-red-100 text-red-800' : 'bg-amber-100 text-amber-800'}`}>
+                        <span className={`text-[0.625rem] font-bold px-1.5 py-0.5 rounded ${alert.severity === 'CRITICAL' ? 'bg-red-100 text-red-800' : 'bg-amber-100 text-amber-800'}`}>
                           {alert.severity}
                         </span>
                         <span className="text-xs font-bold text-slate-800">{alert.title}</span>
                       </div>
-                      <p className="text-[11px] text-slate-500">{alert.description}</p>
-                      <div className="text-[10px] text-slate-400 font-mono">
+                      <p className="text-[0.6875rem] text-slate-500">{alert.description}</p>
+                      <div className="text-[0.625rem] text-slate-400 font-mono">
                         Source: {alert.sourceModule} • Ref: {alert.entityId}
                       </div>
                     </div>
@@ -418,7 +418,7 @@ export default function OfficerCommandCenterPage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Recent Regulatory Activity</h2>
-              <p className="text-[11px] text-slate-500">Immutable audit log entries</p>
+              <p className="text-[0.6875rem] text-slate-500">Immutable audit log entries</p>
             </div>
             <Activity className="w-4 h-4 text-slate-400" />
           </div>
@@ -429,7 +429,7 @@ export default function OfficerCommandCenterPage() {
               recentAudits.map((log, idx) => (
                 <div key={log.id || idx} className="text-xs space-y-0.5 border-l-2 border-blue-400 pl-3">
                   <div className="font-semibold text-slate-800">{log.action}</div>
-                  <div className="text-[11px] text-slate-500">
+                  <div className="text-[0.6875rem] text-slate-500">
                     {log.performedBy || 'System'} • {new Date(log.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </div>
                 </div>
@@ -444,7 +444,7 @@ export default function OfficerCommandCenterPage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 pb-3 border-b border-slate-100">
           <div>
             <h2 className="text-sm font-bold text-slate-900">Institution Attention Portfolio</h2>
-            <p className="text-[11px] text-slate-500">
+            <p className="text-[0.6875rem] text-slate-500">
               Aggregated institutional footprints with explainable risk priority
             </p>
           </div>
@@ -492,12 +492,12 @@ export default function OfficerCommandCenterPage() {
                   <tr key={inst.institutionId} className="hover:bg-slate-50/70 transition">
                     <td className="py-2.5 px-3">
                       <div className="font-semibold text-slate-900">{inst.institutionName}</div>
-                      <div className="text-[10px] text-slate-400">
+                      <div className="text-[0.625rem] text-slate-400">
                         ID: {inst.institutionId} • {inst.state}
                       </div>
                     </td>
                     <td className="py-2.5 px-3">
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${getRiskBadgeColor(inst.riskPriority)}`}>
+                      <span className={`px-2 py-0.5 rounded text-[0.625rem] font-bold border ${getRiskBadgeColor(inst.riskPriority)}`}>
                         {inst.riskPriority}
                       </span>
                     </td>
@@ -516,7 +516,7 @@ export default function OfficerCommandCenterPage() {
                         <span className="text-emerald-700">Adequate</span>
                       )}
                     </td>
-                    <td className="py-2.5 px-3 text-[11px] text-slate-500">
+                    <td className="py-2.5 px-3 text-[0.6875rem] text-slate-500">
                       {inst.activeRenewalCount > 0 && `${inst.activeRenewalCount} Renewal `}
                       {inst.openComplianceCaseCount > 0 && `${inst.openComplianceCaseCount} Case `}
                       {inst.unresolvedDocumentFindingCount > 0 && `${inst.unresolvedDocumentFindingCount} OCR `}
@@ -561,7 +561,7 @@ export default function OfficerCommandCenterPage() {
               >
                 <Icon className="w-5 h-5 mx-auto text-[#0B1F54] mb-1.5" />
                 <div className="text-xs font-bold text-slate-800">{item.label}</div>
-                <div className="text-[10px] text-slate-500 mt-0.5">{item.desc}</div>
+                <div className="text-[0.625rem] text-slate-500 mt-0.5">{item.desc}</div>
               </div>
             );
           })}

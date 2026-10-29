@@ -128,7 +128,7 @@ export default function AdminCommandCenterPage() {
       <div className="bg-[#0B1F54] text-white rounded-xl p-6 shadow-md border border-[#162E73] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#13805E] text-white uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded text-[0.6875rem] font-bold bg-[#13805E] text-white uppercase tracking-wider">
               Administrator Console
             </span>
             <span className="text-xs text-slate-300 font-mono">
@@ -181,7 +181,7 @@ export default function AdminCommandCenterPage() {
             <Building2 className="w-4 h-4 text-blue-600" />
           </div>
           <div className="text-2xl font-bold text-slate-900">{metrics?.totalInstitutionsCount || 0}</div>
-          <div className="text-[11px] text-slate-500 mt-1">Platform-wide registered</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-1">Platform-wide registered</div>
         </div>
 
         <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
@@ -190,7 +190,7 @@ export default function AdminCommandCenterPage() {
             <FileCheck2 className="w-4 h-4 text-emerald-600" />
           </div>
           <div className="text-2xl font-bold text-slate-900">{metrics?.totalFdrsCount || 0}</div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             ₹{((metrics?.totalDeclaredDepositPaise || 0) / 100).toLocaleString('en-IN')}
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function AdminCommandCenterPage() {
             <Layers className="w-4 h-4 text-amber-600" />
           </div>
           <div className="text-2xl font-bold text-slate-900">{workload?.totalOpenTasks || 0}</div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             {workload?.totalUnassignedTasks || 0} unassigned task(s)
           </div>
         </div>
@@ -212,7 +212,7 @@ export default function AdminCommandCenterPage() {
             <ShieldAlert className="w-4 h-4 text-red-600" />
           </div>
           <div className="text-2xl font-bold text-red-700">{alerts.length}</div>
-          <div className="text-[11px] text-slate-500 mt-1">Operational attention items</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-1">Operational attention items</div>
         </div>
 
         <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
@@ -223,7 +223,7 @@ export default function AdminCommandCenterPage() {
           <div className="text-2xl font-bold text-slate-900">
             {trends?.distributions?.simulatedBankOutcomes?.CONFIRMED_LIEN || 0}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">[SIMULATED] Mock SFMS</div>
+          <div className="text-[0.6875rem] text-slate-500 mt-1">[SIMULATED] Mock SFMS</div>
         </div>
       </div>
 
@@ -234,7 +234,7 @@ export default function AdminCommandCenterPage() {
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <div>
                 <h2 className="text-sm font-bold text-slate-900">Officer Workload & Scrutiny Allocation</h2>
-                <p className="text-[11px] text-slate-500">Distribution of active verification and review tasks</p>
+                <p className="text-[0.6875rem] text-slate-500">Distribution of active verification and review tasks</p>
               </div>
               <Button
                 size="sm"
@@ -265,9 +265,9 @@ export default function AdminCommandCenterPage() {
                       <tr key={off.officerId} className="hover:bg-slate-50">
                         <td className="py-2.5 px-3 font-semibold text-slate-900">
                           {off.officerName}
-                          <div className="text-[10px] text-slate-400 font-normal">{off.officerEmail}</div>
+                          <div className="text-[0.625rem] text-slate-400 font-normal">{off.officerEmail}</div>
                         </td>
-                        <td className="py-2.5 px-3 uppercase text-[10px] font-bold text-slate-500">
+                        <td className="py-2.5 px-3 uppercase text-[0.625rem] font-bold text-slate-500">
                           {off.role}
                         </td>
                         <td className="py-2.5 px-3 text-center font-bold text-slate-900">
@@ -301,7 +301,7 @@ export default function AdminCommandCenterPage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h2 className="text-sm font-bold text-slate-900">Data Quality & Freshness</h2>
-              <p className="text-[11px] text-slate-500">Repository integrity checks</p>
+              <p className="text-[0.6875rem] text-slate-500">Repository integrity checks</p>
             </div>
             <Database className="w-4 h-4 text-slate-400" />
           </div>
@@ -316,12 +316,12 @@ export default function AdminCommandCenterPage() {
                 <div key={issue.id} className="p-3 rounded-lg border border-amber-200 bg-amber-50/50 text-xs space-y-1">
                   <div className="flex items-center justify-between font-semibold text-slate-800">
                     <span>{issue.type}</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-amber-200 text-amber-900 font-bold">
+                    <span className="text-[0.625rem] px-1.5 py-0.5 rounded bg-amber-200 text-amber-900 font-bold">
                       {issue.severity}
                     </span>
                   </div>
-                  <div className="text-[11px] text-slate-600">{issue.explanation}</div>
-                  <div className="text-[10px] text-blue-700 font-medium">Fix: {issue.remediation}</div>
+                  <div className="text-[0.6875rem] text-slate-600">{issue.explanation}</div>
+                  <div className="text-[0.625rem] text-blue-700 font-medium">Fix: {issue.remediation}</div>
                 </div>
               ))
             )}

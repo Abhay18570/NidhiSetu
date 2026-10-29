@@ -180,17 +180,17 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
                 Document Intelligence & OCR Analysis
               </h3>
               {analysis && !isStale && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                   <CheckCircle2 className="w-3 h-3" /> Analysis Available
                 </span>
               )}
               {isStale && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
                   <AlertTriangle className="w-3 h-3" /> Stale (Doc Updated)
                 </span>
               )}
               {!analysis && (
-                <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
                   Pending Scan
                 </span>
               )}
@@ -240,7 +240,7 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
               style={{ width: `${progressState.percent}%` }}
             />
           </div>
-          <p className="text-[11px] text-slate-500">
+          <p className="text-[0.6875rem] text-slate-500">
             OCR processing is executing locally inside your browser sandbox. No document contents are sent to external cloud APIs.
           </p>
         </div>
@@ -274,7 +274,7 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
               <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                 Transparent Multi-Dimensional Scorecard
               </h4>
-              <span className="text-[11px] text-slate-400">
+              <span className="text-[0.6875rem] text-slate-400">
                 Analyzed on {new Date(analysis.analyzedAt).toLocaleString('en-IN')} (Duration: {analysis.processingDurationMs}ms)
               </span>
             </div>
@@ -282,29 +282,29 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {/* Dim 1: Completeness */}
               <div className="p-3.5 rounded-lg border border-slate-200 bg-white">
-                <span className="text-[11px] text-slate-500 font-medium">1. Extraction Completeness</span>
+                <span className="text-[0.6875rem] text-slate-500 font-medium">1. Extraction Completeness</span>
                 <div className="mt-1 flex items-baseline gap-2">
                   <span className="text-lg font-bold text-slate-800">
                     {analysis.scorecard?.completeness?.percentage || 0}%
                   </span>
-                  <span className="text-[11px] text-slate-500 font-mono">
+                  <span className="text-[0.6875rem] text-slate-500 font-mono">
                     ({analysis.scorecard?.completeness?.extractedCount}/{analysis.scorecard?.completeness?.totalFields} fields)
                   </span>
                 </div>
-                <p className="text-[10px] text-slate-500 mt-1 truncate">
+                <p className="text-[0.625rem] text-slate-500 mt-1 truncate">
                   {analysis.scorecard?.completeness?.formula}
                 </p>
               </div>
 
               {/* Dim 2: Field Consistency */}
               <div className="p-3.5 rounded-lg border border-slate-200 bg-white">
-                <span className="text-[11px] text-slate-500 font-medium">2. Field Consistency</span>
+                <span className="text-[0.6875rem] text-slate-500 font-medium">2. Field Consistency</span>
                 <div className="mt-1 flex items-baseline gap-2">
                   <span className="text-lg font-bold text-slate-800">
                     {analysis.scorecard?.consistency?.matchedCount || 0} Matched
                   </span>
                 </div>
-                <p className="text-[10px] text-slate-500 mt-1">
+                <p className="text-[0.625rem] text-slate-500 mt-1">
                   {analysis.scorecard?.consistency?.mismatchedCount > 0 ? (
                     <span className="text-rose-600 font-semibold">
                       {analysis.scorecard?.consistency?.mismatchedCount} Discrepancy(ies)
@@ -317,26 +317,26 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
 
               {/* Dim 3: Duplicate Signals */}
               <div className="p-3.5 rounded-lg border border-slate-200 bg-white">
-                <span className="text-[11px] text-slate-500 font-medium">3. Duplicate Signals</span>
+                <span className="text-[0.6875rem] text-slate-500 font-medium">3. Duplicate Signals</span>
                 <div className="mt-1 flex items-baseline gap-2">
                   <span className="text-sm font-bold text-slate-800">
                     {analysis.scorecard?.duplicateSignals?.isDuplicate ? 'Collision Signal' : 'Unique Fingerprint'}
                   </span>
                 </div>
-                <p className="text-[10px] text-slate-500 mt-1 truncate">
+                <p className="text-[0.625rem] text-slate-500 mt-1 truncate">
                   {analysis.scorecard?.duplicateSignals?.label}
                 </p>
               </div>
 
               {/* Dim 4: Readability */}
               <div className="p-3.5 rounded-lg border border-slate-200 bg-white">
-                <span className="text-[11px] text-slate-500 font-medium">4. Document Readability</span>
+                <span className="text-[0.6875rem] text-slate-500 font-medium">4. Document Readability</span>
                 <div className="mt-1 flex items-baseline gap-2">
                   <span className="text-sm font-bold text-slate-800">
                     {analysis.scorecard?.readability?.label || 'Clear'}
                   </span>
                 </div>
-                <p className="text-[10px] text-slate-500 mt-1">
+                <p className="text-[0.625rem] text-slate-500 mt-1">
                   {analysis.scorecard?.readability?.wordCount || 0} recognized text words
                 </p>
               </div>
@@ -392,7 +392,7 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
                         <span
-                          className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
+                          className={`px-2 py-0.5 rounded text-[0.625rem] font-bold uppercase ${
                             f.severity === FINDING_SEVERITY.HIGH
                               ? 'bg-rose-100 text-rose-700 border border-rose-300'
                               : f.severity === FINDING_SEVERITY.MEDIUM
@@ -404,11 +404,11 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
                         </span>
                         <span className="font-semibold">{f.explanation}</span>
                       </div>
-                      <p className="text-[11px] text-slate-600">
+                      <p className="text-[0.6875rem] text-slate-600">
                         <strong>Recommended Action:</strong> {f.recommendedAction}
                       </p>
                       {f.evidenceSnippet && (
-                        <div className="text-[11px] font-mono bg-white/80 p-1.5 rounded border border-slate-200 mt-1">
+                        <div className="text-[0.6875rem] font-mono bg-white/80 p-1.5 rounded border border-slate-200 mt-1">
                           Evidence: &ldquo;{f.evidenceSnippet}&rdquo;
                         </div>
                       )}
@@ -456,30 +456,30 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
                         </td>
                         <td className="py-2 px-3">
                           {isMatch && (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                            <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                               <CheckCircle2 className="w-3 h-3" /> Match
                             </span>
                           )}
                           {isMismatch && (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">
+                            <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">
                               <XCircle className="w-3 h-3" /> Mismatch
                             </span>
                           )}
                           {isMissing && (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                            <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
                               Missing in Doc
                             </span>
                           )}
                           {isAmbiguous && (
-                            <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                            <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
                               Ambiguous
                             </span>
                           )}
                         </td>
-                        <td className="py-2 px-3 text-[11px] text-slate-500">
+                        <td className="py-2 px-3 text-[0.6875rem] text-slate-500">
                           <div>Confidence: <span className="font-semibold text-slate-700">{comp.confidenceIndicator}</span></div>
                           {comp.sourceSnippet && (
-                            <span className="font-mono text-[10px] text-slate-500 block truncate max-w-xs">
+                            <span className="font-mono text-[0.625rem] text-slate-500 block truncate max-w-xs">
                               &ldquo;{comp.sourceSnippet}&rdquo;
                             </span>
                           )}
@@ -493,7 +493,7 @@ export default function DocumentIntelligenceSection({ fdr, onAnalysisUpdated }) 
           </div>
 
           {/* Privacy & Methodology Disclaimer */}
-          <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 text-[11px] text-slate-500 space-y-1">
+          <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200 text-[0.6875rem] text-slate-500 space-y-1">
             <p className="font-semibold text-slate-700 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-[#174EA6]" />
               Local Client-Side Processing & Sandbox Architecture

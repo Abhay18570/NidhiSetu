@@ -114,7 +114,7 @@ export default function InstitutionDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Total FDR Records</div>
             <div className="text-2xl font-black text-[#0B1F54] mt-1">{stats.totalRecords}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Deposits on File</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">Deposits on File</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-[#E8F0FE] text-[#174EA6] flex items-center justify-center shrink-0">
             <FileText className="w-6 h-6" />
@@ -125,7 +125,7 @@ export default function InstitutionDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Verified Deposits</div>
             <div className="text-2xl font-black text-[#13805E] mt-1">{stats.accepted}</div>
-            <div className="text-[11px] text-[#13805E] font-semibold mt-0.5">
+            <div className="text-[0.6875rem] text-[#13805E] font-semibold mt-0.5">
               {formatINR(stats.totalDepositPaise, true)}
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function InstitutionDashboard() {
             <div className="text-2xl font-black text-[#174EA6] mt-1">
               {stats.underReview + stats.submitted}
             </div>
-            <div className="text-[11px] text-slate-400 mt-0.5">
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">
               {stats.clarification > 0 ? `${stats.clarification} Needs Clarification` : 'With Regulatory Officers'}
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function InstitutionDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Upcoming Renewals</div>
             <div className="text-2xl font-black text-rose-600 mt-1">{stats.upcomingMaturities}</div>
-            <div className="text-[11px] text-rose-500 font-semibold mt-0.5">
+            <div className="text-[0.6875rem] text-rose-500 font-semibold mt-0.5">
               {stats.maturedCount > 0 ? `${stats.maturedCount} Already Matured` : 'Within 90 Days'}
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function InstitutionDashboard() {
                           {item.referenceNumber}
                         </Link>
                         <div className="font-semibold text-[#0B1F54] truncate">{item.bankName}</div>
-                        <div className="text-[11px] text-slate-500">
+                        <div className="text-[0.6875rem] text-slate-500">
                           {formatINR(item.depositAmountPaise, true)} &bull; Matures: {item.maturityDate}
                         </div>
                       </div>
@@ -224,7 +224,7 @@ export default function InstitutionDashboard() {
                           {item.status.replace(/_/g, ' ')}
                         </Badge>
                         <div>
-                          <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded border ${badge.colorClass}`}>
+                          <span className={`text-[0.625rem] font-semibold px-1.5 py-0.5 rounded border ${badge.colorClass}`}>
                             {badge.label}
                           </span>
                         </div>
@@ -250,25 +250,25 @@ export default function InstitutionDashboard() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               <div>
-                <span className="text-slate-400 font-semibold block uppercase text-[10px]">Statutory Name:</span>
+                <span className="text-slate-400 font-semibold block uppercase text-[0.625rem]">Statutory Name:</span>
                 <span className="font-bold text-[#0B1F54]">{currentInstitution?.name}</span>
               </div>
               <div>
-                <span className="text-slate-400 font-semibold block uppercase text-[10px]">AISHE Code:</span>
+                <span className="text-slate-400 font-semibold block uppercase text-[0.625rem]">AISHE Code:</span>
                 <span className="font-mono font-bold text-[#174EA6]">{currentInstitution?.aisheCode}</span>
               </div>
               <div>
-                <span className="text-slate-400 font-semibold block uppercase text-[10px]">Location:</span>
+                <span className="text-slate-400 font-semibold block uppercase text-[0.625rem]">Location:</span>
                 <span className="text-slate-700">{currentInstitution?.city}, {currentInstitution?.state}</span>
               </div>
               <div>
-                <span className="text-slate-400 font-semibold block uppercase text-[10px]">Representative:</span>
+                <span className="text-slate-400 font-semibold block uppercase text-[0.625rem]">Representative:</span>
                 <span className="font-semibold text-slate-800">{currentInstitution?.representativeName}</span>
               </div>
             </div>
 
             <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-              <span className="text-[11px] text-slate-400 font-mono">
+              <span className="text-[0.6875rem] text-slate-400 font-mono">
                 Ref ID: {currentInstitution?.regReferenceNo || currentInstitution?.id}
               </span>
               <Link
@@ -335,7 +335,7 @@ export default function InstitutionDashboard() {
               <h3 className="text-xs font-bold uppercase tracking-wider text-[#0B1F54]">
                 Recent Institutional Activity
               </h3>
-              <span className="text-[10px] text-slate-400">Audit Trail</span>
+              <span className="text-[0.625rem] text-slate-400">Audit Trail</span>
             </div>
 
             {activities.length === 0 ? (
@@ -347,7 +347,7 @@ export default function InstitutionDashboard() {
                 {activities.map((act) => (
                   <div key={act.id} className="text-xs border-b border-slate-50 pb-2 last:border-none">
                     <div className="font-semibold text-[#0B1F54]">{act.summary}</div>
-                    <div className="flex items-center gap-2 text-[10px] text-slate-400 mt-0.5">
+                    <div className="flex items-center gap-2 text-[0.625rem] text-slate-400 mt-0.5">
                       <span className="font-mono">{act.eventType}</span>
                       <span>&bull;</span>
                       <span>{new Date(act.timestamp).toLocaleString()}</span>

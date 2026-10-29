@@ -347,7 +347,7 @@ export default function RegisterPage() {
                     {isPast ? <Check className="w-4 h-4" /> : st.num}
                   </div>
                   <span
-                    className={`text-[10px] sm:text-xs font-bold mt-1.5 truncate max-w-full ${
+                    className={`text-[0.625rem] sm:text-xs font-bold mt-1.5 truncate max-w-full ${
                       isCurrent ? 'text-[#174EA6]' : isPast ? 'text-[#13805E]' : 'text-slate-400'
                     }`}
                   >
@@ -705,25 +705,25 @@ export default function RegisterPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                 <div className="p-3.5 bg-[#F5F7FB] rounded-lg space-y-1">
-                  <span className="text-slate-500 font-semibold uppercase text-[10px]">Institution Legal Name:</span>
+                  <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">Institution Legal Name:</span>
                   <div className="font-bold text-[#0B1F54] text-sm">{formData.name}</div>
                   <div className="text-slate-600">{formData.type} &bull; {formData.category}</div>
                 </div>
 
                 <div className="p-3.5 bg-[#F5F7FB] rounded-lg space-y-1">
-                  <span className="text-slate-500 font-semibold uppercase text-[10px]">Statutory Identifiers:</span>
+                  <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">Statutory Identifiers:</span>
                   <div className="font-mono font-bold text-[#174EA6] text-sm">AISHE: {formData.aisheCode}</div>
                   <div className="text-slate-600 font-mono">PID: {formData.aictePid || 'None'}</div>
                 </div>
 
                 <div className="p-3.5 bg-[#F5F7FB] rounded-lg space-y-1">
-                  <span className="text-slate-500 font-semibold uppercase text-[10px]">Location:</span>
+                  <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">Location:</span>
                   <div className="font-semibold text-[#0B1F54]">{formData.address}</div>
                   <div className="text-slate-600">{formData.city}, {formData.district}, {formData.state} - {formData.pincode}</div>
                 </div>
 
                 <div className="p-3.5 bg-[#F5F7FB] rounded-lg space-y-1">
-                  <span className="text-slate-500 font-semibold uppercase text-[10px]">Authorized Signatory:</span>
+                  <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">Authorized Signatory:</span>
                   <div className="font-bold text-[#0B1F54]">{formData.representativeName} ({formData.representativeDesignation})</div>
                   <div className="text-slate-600 font-mono">{formData.representativeEmail} &bull; {formData.representativePhone}</div>
                 </div>
@@ -853,7 +853,7 @@ export default function RegisterPage() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
+          className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
         >
           <div className="bg-white rounded-xl border border-[#D3DDEB] max-w-md w-full p-6 gov-shadow-lg space-y-4">
             <div className="flex items-center gap-3 text-rose-600">

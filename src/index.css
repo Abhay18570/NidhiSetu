@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 @theme {
+  /* Reflow at the space available after enlarging the UI. Media-query rem
+     units use the browser's initial font size, not the scaled root size. */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 54rem;
+  --breakpoint-lg: 96rem;
+  --breakpoint-xl: 120rem;
+  --breakpoint-2xl: 144rem;
   --color-gov-navy: #0B1F54;
   --color-gov-navy-dark: #071438;
   --color-gov-navy-light: #162E73;
@@ -20,6 +27,7 @@
 
 :root {
   --font-scale: 100%;
+  --ui-scale: 1;
   --gov-navy: #0B1F54;
   --gov-blue: #174EA6;
   --gov-bg: #F5F7FB;
@@ -28,11 +36,41 @@
 }
 
 html {
-  font-size: var(--font-scale);
+  /* Accessibility text sizing is relative to the responsive default. */
+  font-size: calc(var(--font-scale) * var(--ui-scale));
   scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Devanagari", "Noto Sans", Helvetica, Arial, sans-serif;
   background-color: #F5F7FB;
   color: #0D1B2A;
+}
+
+@media (min-width: 48rem) {
+  :root { --ui-scale: 1.125; }
+}
+
+@media (min-width: 64rem) {
+  :root { --ui-scale: 1.25; }
+}
+
+@media (min-width: 80rem) {
+  :root { --ui-scale: 1.5; }
+}
+
+/* Let grid/flex children shrink around scrollable tables and long records. */
+@layer base {
+  :where(.grid, .flex) > * { min-width: 0; }
+}
+
+/* Expanded forms must remain reachable on short screens and at larger text
+   settings. Scroll the panel rather than clipping its header or actions. */
+.app-modal > :first-child {
+  max-height: calc(100dvh - 3rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+@media print {
+  :root { --ui-scale: 1; }
 }
 
 /* High Contrast Mode */

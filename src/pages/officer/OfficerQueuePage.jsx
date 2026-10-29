@@ -127,9 +127,9 @@ export default function OfficerQueuePage() {
             statusFilter === FDR_STATUS.SUBMITTED ? 'ring-2 ring-[#174EA6] bg-blue-50/20' : 'hover:bg-slate-50'
           }`}
         >
-          <div className="text-[11px] text-[#505F79] font-semibold uppercase">Pending Scrutiny</div>
+          <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">Pending Scrutiny</div>
           <div className="text-2xl font-black text-[#174EA6] mt-0.5">{pendingCount}</div>
-          <div className="text-[11px] text-slate-400">Awaiting Initial Review</div>
+          <div className="text-[0.6875rem] text-slate-400">Awaiting Initial Review</div>
         </Card>
 
         <Card
@@ -138,9 +138,9 @@ export default function OfficerQueuePage() {
             statusFilter === FDR_STATUS.UNDER_REVIEW ? 'ring-2 ring-[#174EA6] bg-blue-50/20' : 'hover:bg-slate-50'
           }`}
         >
-          <div className="text-[11px] text-[#505F79] font-semibold uppercase">In Active Review</div>
+          <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">In Active Review</div>
           <div className="text-2xl font-black text-[#0B1F54] mt-0.5">{inReviewCount}</div>
-          <div className="text-[11px] text-slate-400">Assigned / In Progress</div>
+          <div className="text-[0.6875rem] text-slate-400">Assigned / In Progress</div>
         </Card>
 
         <Card
@@ -149,9 +149,9 @@ export default function OfficerQueuePage() {
             statusFilter === FDR_STATUS.CLARIFICATION_REQUIRED ? 'ring-2 ring-[#E89B24] bg-amber-50/20' : 'hover:bg-slate-50'
           }`}
         >
-          <div className="text-[11px] text-[#505F79] font-semibold uppercase">Clarification Required</div>
+          <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">Clarification Required</div>
           <div className="text-2xl font-black text-[#C67C11] mt-0.5">{clarifyCount}</div>
-          <div className="text-[11px] text-slate-400">Awaiting College Response</div>
+          <div className="text-[0.6875rem] text-slate-400">Awaiting College Response</div>
         </Card>
 
         <Card
@@ -160,9 +160,9 @@ export default function OfficerQueuePage() {
             statusFilter === FDR_STATUS.REVIEW_ACCEPTED ? 'ring-2 ring-[#13805E] bg-emerald-50/20' : 'hover:bg-slate-50'
           }`}
         >
-          <div className="text-[11px] text-[#505F79] font-semibold uppercase">Accepted / Decided</div>
+          <div className="text-[0.6875rem] text-[#505F79] font-semibold uppercase">Accepted / Decided</div>
           <div className="text-2xl font-black text-[#13805E] mt-0.5">{decidedCount}</div>
-          <div className="text-[11px] text-slate-400">Completed Reviews</div>
+          <div className="text-[0.6875rem] text-slate-400">Completed Reviews</div>
         </Card>
       </div>
 
@@ -225,7 +225,7 @@ export default function OfficerQueuePage() {
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#0B1F54] text-white uppercase text-[10px] tracking-wider">
+              <thead className="bg-[#0B1F54] text-white uppercase text-[0.625rem] tracking-wider">
                 <tr>
                   <th className="px-4 py-3.5">Docket Ref</th>
                   <th className="px-3 py-3.5">Institution & AISHE</th>
@@ -258,13 +258,13 @@ export default function OfficerQueuePage() {
                         <div className="font-bold text-[#0B1F54] truncate">
                           {inst?.name || item.institutionId}
                         </div>
-                        <div className="text-[11px] text-[#505F79] font-mono">
+                        <div className="text-[0.6875rem] text-[#505F79] font-mono">
                           AISHE: {inst?.aisheCode || '—'} &bull; {inst?.city || ''}
                         </div>
                       </td>
                       <td className="px-3 py-3.5">
                         <div className="font-bold text-[#0B1F54]">{item.bankName}</div>
-                        <div className="text-[11px] text-[#505F79] font-mono">
+                        <div className="text-[0.6875rem] text-[#505F79] font-mono">
                           IFSC: {item.ifsc}
                         </div>
                       </td>
@@ -272,7 +272,7 @@ export default function OfficerQueuePage() {
                         <div className="font-bold text-sm text-[#13805E]">
                           {formatINR(item.depositAmountPaise, true)}
                         </div>
-                        <div className="text-[10px] text-slate-400">
+                        <div className="text-[0.625rem] text-slate-400">
                           Matures: {item.maturityDate}
                         </div>
                       </td>

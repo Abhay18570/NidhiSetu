@@ -28,12 +28,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Main Logo & Title */}
-          <div className="min-w-0 flex-1 lg:flex-none py-2">
+          <div className="min-w-0 flex-1 xl:flex-none py-2">
             <Logo />
           </div>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center space-x-1" aria-label="Main Navigation">
+          <nav className="hidden xl:flex items-center space-x-1" aria-label="Main Navigation">
             {SITE_CONFIG.navLinks.map((link) => (
               <NavLink
                 key={link.path}
@@ -52,7 +52,7 @@ export default function Navbar() {
           </nav>
 
           {/* Action CTAs: Login & Register */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden xl:flex items-center space-x-3">
             <Button
               to="/login"
               variant="outline"
@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex shrink-0 lg:hidden">
+          <div className="flex shrink-0 xl:hidden">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -95,7 +95,7 @@ export default function Navbar() {
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
         <div
-          className="lg:hidden border-t border-[#D3DDEB] bg-white px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top-2 duration-150"
+          className="xl:hidden border-t border-[#D3DDEB] bg-white px-4 pt-3 pb-6 space-y-2 animate-in slide-in-from-top-2 duration-150"
           id="mobile-menu"
         >
           <div className="flex flex-col space-y-1">

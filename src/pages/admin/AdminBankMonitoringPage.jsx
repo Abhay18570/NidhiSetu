@@ -99,7 +99,7 @@ export default function AdminBankMonitoringPage() {
         <div className="flex items-start gap-3">
           <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="text-xs text-amber-900 leading-relaxed">
-            <span className="font-bold uppercase tracking-wider block text-amber-800 text-[11px]">
+            <span className="font-bold uppercase tracking-wider block text-amber-800 text-[0.6875rem]">
               {SIMULATION_DISCLAIMER}
             </span>
             Administrator Telemetry Console for client-side banking simulation engines. All bank nodes, core-banking
@@ -154,15 +154,15 @@ export default function AdminBankMonitoringPage() {
       {/* Telemetry Metric Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <Card className="p-4 border-l-4 border-l-[#174EA6] space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Total Verifications
           </div>
           <div className="text-2xl font-black text-[#0B1F54]">{stats.totalRequests}</div>
-          <div className="text-[11px] text-slate-500">Exchanged simulation runs</div>
+          <div className="text-[0.6875rem] text-slate-500">Exchanged simulation runs</div>
         </Card>
 
         <Card className="p-4 border-l-4 border-l-emerald-600 space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Lien Confirmed Rate
           </div>
           <div className="text-2xl font-black text-emerald-600">
@@ -170,25 +170,25 @@ export default function AdminBankMonitoringPage() {
               ? `${Math.round((stats.lienConfirmedCount / stats.totalRequests) * 100)}%`
               : '0%'}
           </div>
-          <div className="text-[11px] text-slate-500">
+          <div className="text-[0.6875rem] text-slate-500">
             {stats.lienConfirmedCount} confirmed in simulation
           </div>
         </Card>
 
         <Card className="p-4 border-l-4 border-l-amber-500 space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Active Simulator Nodes
           </div>
           <div className="text-2xl font-black text-amber-600">{banks.length}</div>
-          <div className="text-[11px] text-slate-500">Registered commercial banks</div>
+          <div className="text-[0.6875rem] text-slate-500">Registered commercial banks</div>
         </Card>
 
         <Card className="p-4 border-l-4 border-l-rose-500 space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Simulated Timeouts
           </div>
           <div className="text-2xl font-black text-rose-600">{stats.timeoutCount}</div>
-          <div className="text-[11px] text-slate-500">Network latency scenario triggers</div>
+          <div className="text-[0.6875rem] text-slate-500">Network latency scenario triggers</div>
         </Card>
       </div>
 
@@ -199,14 +199,14 @@ export default function AdminBankMonitoringPage() {
             <Building2 className="w-4 h-4 text-[#174EA6]" />
             Synthetic Bank Registry Directory ({banks.length})
           </div>
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[0.6875rem] text-slate-500">
             All nodes strictly marked as client-side test profiles
           </span>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[10px] tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[0.625rem] tracking-wider">
               <tr>
                 <th className="py-3 px-4">Bank Profile</th>
                 <th className="py-3 px-4">Code / ID</th>
@@ -221,18 +221,18 @@ export default function AdminBankMonitoringPage() {
                 <tr key={b.bankId} className="hover:bg-slate-50/70 transition-colors">
                   <td className="py-3 px-4">
                     <div className="font-bold text-[#0B1F54]">{b.displayName}</div>
-                    <div className="text-[10px] text-slate-400">{b.headquarters}</div>
+                    <div className="text-[0.625rem] text-slate-400">{b.headquarters}</div>
                   </td>
 
                   <td className="py-3 px-4">
                     <span className="font-mono font-bold text-[#174EA6]">{b.bankCode}</span>
-                    <span className="block text-[10px] font-mono text-slate-400">{b.bankId}</span>
+                    <span className="block text-[0.625rem] font-mono text-slate-400">{b.bankId}</span>
                   </td>
 
                   <td className="py-3 px-4 text-slate-600">{b.bankCategory}</td>
 
                   <td className="py-3 px-4">
-                    <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">
+                    <span className="text-[0.625rem] px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">
                       {b.supportedVerificationTypes?.length || 4} Verification Types
                     </span>
                   </td>
@@ -242,7 +242,7 @@ export default function AdminBankMonitoringPage() {
                   </td>
 
                   <td className="py-3 px-4">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[0.625rem] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                       ACTIVE SIMULATOR
                     </span>
@@ -272,7 +272,7 @@ export default function AdminBankMonitoringPage() {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[10px] tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[0.625rem] tracking-wider">
               <tr>
                 <th className="py-3 px-4">Reference</th>
                 <th className="py-3 px-4">Institution</th>
@@ -293,12 +293,12 @@ export default function AdminBankMonitoringPage() {
                   </td>
                   <td className="py-3 px-4 text-slate-700">{r.bankName}</td>
                   <td className="py-3 px-4">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-700">
+                    <span className="px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-slate-100 text-slate-700">
                       {r.scenarioId ? r.scenarioId.replace('SCENARIO_', '') : 'EXACT_MATCH'}
                     </span>
                   </td>
                   <td className="py-3 px-4">
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
+                    <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-blue-50 text-blue-700 border border-blue-200">
                       {r.requestStatus}
                     </span>
                   </td>

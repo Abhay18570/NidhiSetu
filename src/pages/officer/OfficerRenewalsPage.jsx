@@ -242,16 +242,16 @@ export default function OfficerRenewalsPage() {
 
                     <td className="px-4 py-3.5">
                       <div className="font-semibold text-gray-900">{req.institutionName}</div>
-                      <div className="text-[11px] text-gray-500">ID: {req.institutionId}</div>
+                      <div className="text-[0.6875rem] text-gray-500">ID: {req.institutionId}</div>
                     </td>
 
                     <td className="px-4 py-3.5">
                       <div className="font-semibold text-gray-800">{req.originalFdrNumber}</div>
-                      <div className="text-[11px] text-gray-500">Matures: {req.oldMaturityDate}</div>
+                      <div className="text-[0.6875rem] text-gray-500">Matures: {req.oldMaturityDate}</div>
                     </td>
 
                     <td className="px-4 py-3.5 text-gray-600">
-                      <span className="px-2 py-0.5 rounded text-[11px] bg-gray-100 font-medium">
+                      <span className="px-2 py-0.5 rounded text-[0.6875rem] bg-gray-100 font-medium">
                         {req.renewalType}
                       </span>
                     </td>
@@ -260,14 +260,14 @@ export default function OfficerRenewalsPage() {
                       <div className="font-semibold text-gray-900">
                         ₹{(((req.replacementTotalPaise || 0) / 100)).toLocaleString('en-IN')}
                       </div>
-                      <div className="text-[11px] text-gray-500">
+                      <div className="text-[0.6875rem] text-gray-500">
                         Orig: ₹{(((req.originalAmountPaise || 0) / 100)).toLocaleString('en-IN')}
                       </div>
                     </td>
 
                     <td className="px-4 py-3.5">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold ${
+                        className={`inline-flex items-center px-2 py-0.5 rounded text-[0.6875rem] font-semibold ${
                           req.continuityStatus === 'CONTINUOUS_DECLARED_COVERAGE'
                             ? 'bg-emerald-100 text-emerald-800'
                             : req.continuityStatus === 'PARTIAL_DECLARED_COVERAGE'
@@ -281,7 +281,7 @@ export default function OfficerRenewalsPage() {
 
                     <td className="px-4 py-3.5">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold ${
+                        className={`inline-flex items-center px-2 py-0.5 rounded text-[0.6875rem] font-semibold ${
                           req.status === RENEWAL_STATUS.ACCEPTED_FOR_RECORD
                             ? 'bg-emerald-100 text-emerald-800'
                             : req.status === RENEWAL_STATUS.CLARIFICATION_REQUIRED

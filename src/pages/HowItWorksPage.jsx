@@ -145,7 +145,7 @@ export default function HowItWorksPage() {
                   <div className="w-14 h-14 rounded-xl bg-[#0B1F54] text-white flex items-center justify-center font-mono font-extrabold text-xl shadow-sm">
                     {phase.step}
                   </div>
-                  <span className="text-[10px] font-bold text-[#174EA6] mt-2 font-mono bg-[#E8F0FE] px-2 py-0.5 rounded">
+                  <span className="text-[0.625rem] font-bold text-[#174EA6] mt-2 font-mono bg-[#E8F0FE] px-2 py-0.5 rounded">
                     {phase.timeframe}
                   </span>
                 </div>

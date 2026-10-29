@@ -248,7 +248,7 @@ export default function InstitutionReleaseRequestsPage() {
 
                     <td className="px-4 py-3.5">
                       <div className="font-semibold text-gray-800">{req.originalFdrNumber}</div>
-                      <div className="text-[11px] text-gray-500">
+                      <div className="text-[0.6875rem] text-gray-500">
                         ₹{(((req.amountPaise || 0) / 100)).toLocaleString('en-IN')}
                       </div>
                     </td>
@@ -263,7 +263,7 @@ export default function InstitutionReleaseRequestsPage() {
 
                     <td className="px-4 py-3.5">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold ${
+                        className={`inline-flex items-center px-2 py-0.5 rounded text-[0.6875rem] font-semibold ${
                           req.status === RELEASE_STATUS.ADMINISTRATIVELY_CLEARED
                             ? 'bg-emerald-100 text-emerald-800'
                             : req.status === RELEASE_STATUS.DECLINED
@@ -277,7 +277,7 @@ export default function InstitutionReleaseRequestsPage() {
                       </span>
                     </td>
 
-                    <td className="px-4 py-3.5 max-w-xs text-gray-600 text-[11px]">
+                    <td className="px-4 py-3.5 max-w-xs text-gray-600 text-[0.6875rem]">
                       {req.clearanceReason || req.declinedReason || (req.officerNotes && req.officerNotes[0]) || 'Under initial review'}
                     </td>
 
@@ -294,7 +294,7 @@ export default function InstitutionReleaseRequestsPage() {
 
       {/* Submission Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="app-modal fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-xl max-w-lg w-full p-5 border border-gray-200 space-y-4 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between pb-3 border-b border-gray-200">
               <h3 className="text-base font-bold text-[#0B1F54] flex items-center gap-2">
@@ -392,7 +392,7 @@ export default function InstitutionReleaseRequestsPage() {
                 />
               </div>
 
-              <div className="p-3 bg-gray-50 border rounded text-[11px] text-gray-600">
+              <div className="p-3 bg-gray-50 border rounded text-[0.6875rem] text-gray-600">
                 <span className="font-semibold text-gray-900 block mb-0.5">Statutory Confirmation:</span>
                 I acknowledge that administrative clearance in NidhiSetu represents administrative record release only and does NOT release any actual commercial bank lien.
               </div>

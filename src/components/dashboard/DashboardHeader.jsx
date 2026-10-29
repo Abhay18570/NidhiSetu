@@ -30,13 +30,13 @@ export default function DashboardHeader({ onToggleSidebar }) {
 
   return (
     <header className="sticky top-0 z-30 bg-white border-b border-[#D3DDEB] gov-shadow-sm">
-      <div className="px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
+      <div className="px-4 sm:px-6 py-2.5 flex flex-wrap items-center justify-between gap-4">
         {/* Left: Mobile hamburger + Role Identity */}
-        <div className="flex items-center gap-3">
+        <div className="min-w-0 basis-full sm:basis-0 flex flex-1 items-center gap-3">
           <button
             type="button"
             onClick={onToggleSidebar}
-            className="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#174EA6]"
+            className="lg:hidden shrink-0 p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-[#174EA6]"
             aria-label="Toggle Dashboard Sidebar"
           >
             <Menu className="w-5 h-5" />
@@ -44,10 +44,10 @@ export default function DashboardHeader({ onToggleSidebar }) {
 
           <div className="flex flex-col text-left">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded border ${headerInfo.color}`}>
+              <span className={`text-[0.625rem] font-extrabold uppercase px-2 py-0.5 rounded border ${headerInfo.color}`}>
                 {headerInfo.tag}
               </span>
-              <span className="hidden sm:inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-semibold">
+              <span className="hidden sm:inline-flex items-center gap-1 text-[0.625rem] px-1.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-semibold">
                 <Shield className="w-3 h-3 text-[#E89B24]" />
                 <span>SIH Demo Prototype</span>
               </span>
@@ -59,7 +59,7 @@ export default function DashboardHeader({ onToggleSidebar }) {
         </div>
 
         {/* Right: Language switch + Notifications + UserMenu */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3 ml-auto">
           {/* Quick Language Dropdown */}
           <div className="flex items-center gap-1 bg-[#F5F7FB] border border-[#D3DDEB] rounded-lg px-2 py-1">
             <Globe className="w-3.5 h-3.5 text-[#174EA6]" />

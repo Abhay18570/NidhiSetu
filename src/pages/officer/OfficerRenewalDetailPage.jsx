@@ -434,7 +434,7 @@ export default function OfficerRenewalDetailPage() {
                 <div key={r.id || r.fdrId} className="p-2 bg-gray-50 rounded border flex items-center justify-between">
                   <div>
                     <span className="font-bold text-gray-900">{r.fdrNumber}</span>
-                    <span className="text-gray-500 block text-[11px]">{r.bankName} • Maturity: {r.maturityDate}</span>
+                    <span className="text-gray-500 block text-[0.6875rem]">{r.bankName} • Maturity: {r.maturityDate}</span>
                   </div>
                   <span className="font-bold text-gray-900">
                     ₹{(((r.depositAmountPaise || r.amountPaise || 0) / 100)).toLocaleString('en-IN')}
@@ -477,7 +477,7 @@ export default function OfficerRenewalDetailPage() {
                 <div className="h-full bg-emerald-700" style={{ width: '40%' }} title="Successor Coverage" />
               </div>
 
-              <div className="flex items-center justify-between text-[11px] text-gray-500 pt-1">
+              <div className="flex items-center justify-between text-[0.6875rem] text-gray-500 pt-1">
                 <span>Issue Date</span>
                 <span className="font-bold text-gray-800">Maturity: {request.oldMaturityDate}</span>
                 <span className="font-bold text-emerald-800">
@@ -526,12 +526,12 @@ export default function OfficerRenewalDetailPage() {
             <div className="p-3 bg-gray-50 rounded border space-y-2">
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-gray-900">Lien Continuity Signal:</span>
-                <span className="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-100 text-[#0B1F54]">
+                <span className="px-2 py-0.5 rounded text-[0.6875rem] font-bold bg-blue-100 text-[#0B1F54]">
                   {simulatedLienResult.status}
                 </span>
               </div>
               <p className="text-gray-700">{simulatedLienResult.details}</p>
-              <div className="text-[10px] text-amber-800 font-semibold border-t pt-1">
+              <div className="text-[0.625rem] text-amber-800 font-semibold border-t pt-1">
                 [SIMULATED] {simulatedLienResult.disclaimer}
               </div>
             </div>
@@ -568,7 +568,7 @@ export default function OfficerRenewalDetailPage() {
         <div className="space-y-2">
           {(request.timeline || []).map((entry, idx) => (
             <div key={idx} className="flex items-start gap-3 p-2.5 bg-gray-50 rounded border border-gray-100">
-              <span className="text-[11px] text-gray-400 font-mono shrink-0">
+              <span className="text-[0.6875rem] text-gray-400 font-mono shrink-0">
                 {new Date(entry.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </span>
               <div>
@@ -583,7 +583,7 @@ export default function OfficerRenewalDetailPage() {
 
       {/* Action Dialog Modal */}
       {actionModalType && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="app-modal fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-xl max-w-lg w-full p-5 border border-gray-200 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-gray-200">
               <h3 className="text-base font-bold text-[#0B1F54]">

@@ -273,7 +273,7 @@ export default function AdminRenewalMonitoringPage() {
 
                     <td className="px-4 py-3.5">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold ${
+                        className={`inline-flex items-center px-2 py-0.5 rounded text-[0.6875rem] font-semibold ${
                           esc.severity === ESCALATION_LEVELS.URGENT
                             ? 'bg-red-100 text-red-800'
                             : esc.severity === ESCALATION_LEVELS.HIGH_PRIORITY
@@ -287,7 +287,7 @@ export default function AdminRenewalMonitoringPage() {
 
                     <td className="px-4 py-3.5">
                       <div className="font-semibold text-gray-900">{esc.institutionName}</div>
-                      <div className="text-[11px] text-gray-500">FDR #{esc.fdrNumber}</div>
+                      <div className="text-[0.6875rem] text-gray-500">FDR #{esc.fdrNumber}</div>
                     </td>
 
                     <td className="px-4 py-3.5 max-w-sm text-gray-700 truncate" title={esc.reason}>
@@ -300,7 +300,7 @@ export default function AdminRenewalMonitoringPage() {
 
                     <td className="px-4 py-3.5">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold ${
+                        className={`inline-flex items-center px-2 py-0.5 rounded text-[0.6875rem] font-semibold ${
                           esc.status === 'RESOLVED'
                             ? 'bg-emerald-100 text-emerald-800'
                             : esc.status === 'ACKNOWLEDGED'

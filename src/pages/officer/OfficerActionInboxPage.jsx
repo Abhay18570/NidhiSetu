@@ -151,7 +151,7 @@ export default function OfficerActionInboxPage() {
       <div className="bg-[#0B1F54] text-white rounded-xl p-6 shadow-md border border-[#162E73] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded text-[0.6875rem] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
               Unified Queue
             </span>
             <span className="text-xs text-slate-300 font-mono">
@@ -293,25 +293,25 @@ export default function OfficerActionInboxPage() {
                 filteredItems.map((item) => (
                   <tr key={item.actionId} className="hover:bg-slate-50/70 transition">
                     <td className="py-3 px-4 align-top">
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${getPriorityBadgeClass(item.priority)}`}>
+                      <span className={`px-2 py-0.5 rounded text-[0.625rem] font-bold border ${getPriorityBadgeClass(item.priority)}`}>
                         {item.priority}
                       </span>
                     </td>
                     <td className="py-3 px-4 align-top space-y-0.5">
                       <div className="font-bold text-slate-900">{item.title}</div>
-                      <div className="text-[11px] text-slate-500 flex items-center gap-1.5">
+                      <div className="text-[0.6875rem] text-slate-500 flex items-center gap-1.5">
                         <Building2 className="w-3 h-3 text-slate-400" />
                         <span>{item.institutionName}</span>
                       </div>
-                      <div className="text-[10px] font-mono text-slate-400">
+                      <div className="text-[0.625rem] font-mono text-slate-400">
                         ID: {item.actionId}
                       </div>
                     </td>
                     <td className="py-3 px-4 align-top">
-                      <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-700">
+                      <span className="px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-slate-100 text-slate-700">
                         {item.sourceModule.replace('MODULE_', 'M')}
                       </span>
-                      <div className="text-[10px] text-slate-400 mt-1">{item.actionType}</div>
+                      <div className="text-[0.625rem] text-slate-400 mt-1">{item.actionType}</div>
                     </td>
                     <td className="py-3 px-4 align-top">
                       {item.assignedOfficerId ? (
@@ -321,7 +321,7 @@ export default function OfficerActionInboxPage() {
                           </span>
                           <button
                             onClick={() => handleOpenAssignModal(item)}
-                            className="block text-[10px] text-blue-600 hover:underline mt-0.5"
+                            className="block text-[0.625rem] text-blue-600 hover:underline mt-0.5"
                           >
                             Reassign
                           </button>
@@ -329,7 +329,7 @@ export default function OfficerActionInboxPage() {
                       ) : (
                         <button
                           onClick={() => handleOpenAssignModal(item)}
-                          className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 hover:bg-amber-200 transition"
+                          className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-amber-100 text-amber-800 hover:bg-amber-200 transition"
                         >
                           + Assign Officer
                         </button>
@@ -337,7 +337,7 @@ export default function OfficerActionInboxPage() {
                     </td>
                     <td className="py-3 px-4 align-top">
                       <div className="font-medium text-slate-800">{item.status}</div>
-                      <div className="text-[10px] text-slate-500 mt-0.5">
+                      <div className="text-[0.625rem] text-slate-500 mt-0.5">
                         Due: {item.dueDate ? item.dueDate.split('T')[0] : 'Open cycle'}
                       </div>
                     </td>
@@ -361,7 +361,7 @@ export default function OfficerActionInboxPage() {
 
       {/* Task Assignment Modal */}
       {selectedTaskForAssign && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+        <div className="app-modal fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
           <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 space-y-4 animate-in fade-in zoom-in-95">
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <h3 className="text-sm font-bold text-slate-900">

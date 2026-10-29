@@ -69,7 +69,7 @@ export default function InstitutionPortfolioPage() {
       <div className="bg-[#0B1F54] text-white rounded-xl p-6 shadow-md border border-[#162E73] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#13805E] text-white uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded text-[0.6875rem] font-bold bg-[#13805E] text-white uppercase tracking-wider">
               Institutional Portfolio
             </span>
             <span className="text-xs text-slate-300 font-mono">
@@ -113,7 +113,7 @@ export default function InstitutionPortfolioPage() {
             <FileText className="w-4 h-4 text-blue-600" />
           </div>
           <div className="text-2xl font-bold text-slate-900">{portfolio?.totalFdrs || 0}</div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             {portfolio?.activeFdrs || 0} currently active & approved
           </div>
         </div>
@@ -124,7 +124,7 @@ export default function InstitutionPortfolioPage() {
             <TrendingUp className="w-4 h-4 text-emerald-600" />
           </div>
           <div className="text-2xl font-bold text-slate-900">₹{declaredRupees}</div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             Eligible Coverage: ₹{eligibleRupees}
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function InstitutionPortfolioPage() {
               <span className="text-emerald-600">Compliant</span>
             )}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             {portfolio?.shortfallPaise > 0 ? 'Supplementary deposit required' : 'Meets AICTE norm criteria'}
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function InstitutionPortfolioPage() {
             <RotateCcw className="w-4 h-4 text-amber-600" />
           </div>
           <div className="text-2xl font-bold text-slate-900">{portfolio?.activeRenewalCount || 0}</div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             {portfolio?.maturedFdrs || 0} deposit(s) currently matured
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function InstitutionPortfolioPage() {
             </div>
             <div>
               <div className="text-sm font-bold text-slate-900">Submit New FDR</div>
-              <div className="text-[11px] text-slate-500">Upload certificate & initiate review</div>
+              <div className="text-[0.6875rem] text-slate-500">Upload certificate & initiate review</div>
             </div>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function InstitutionPortfolioPage() {
             </div>
             <div>
               <div className="text-sm font-bold text-slate-900">View FDR Records</div>
-              <div className="text-[11px] text-slate-500">Repository of all physical & e-FDRs</div>
+              <div className="text-[0.6875rem] text-slate-500">Repository of all physical & e-FDRs</div>
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function InstitutionPortfolioPage() {
             </div>
             <div>
               <div className="text-sm font-bold text-slate-900">Plan Renewal</div>
-              <div className="text-[11px] text-slate-500">Manage maturity continuity</div>
+              <div className="text-[0.6875rem] text-slate-500">Manage maturity continuity</div>
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function InstitutionPortfolioPage() {
             </div>
             <div>
               <div className="text-sm font-bold text-slate-900">View Compliance</div>
-              <div className="text-[11px] text-slate-500">Check adequacy against norms</div>
+              <div className="text-[0.6875rem] text-slate-500">Check adequacy against norms</div>
             </div>
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function InstitutionPortfolioPage() {
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div>
             <h2 className="text-sm font-bold text-slate-900">Registered Security Deposit Certificates</h2>
-            <p className="text-[11px] text-slate-500">Strictly isolated institutional portfolio</p>
+            <p className="text-[0.6875rem] text-slate-500">Strictly isolated institutional portfolio</p>
           </div>
           <Link
             to="/institution/fdr-records"
@@ -267,7 +267,7 @@ export default function InstitutionPortfolioPage() {
                     </td>
                     <td className="py-2.5 px-3">{fdr.maturityDate || 'N/A'}</td>
                     <td className="py-2.5 px-3">
-                      <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-800">
+                      <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-slate-100 text-slate-800">
                         {fdr.status || fdr.lifecycleStatus}
                       </span>
                     </td>

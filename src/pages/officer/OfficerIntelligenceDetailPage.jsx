@@ -201,7 +201,7 @@ export default function OfficerIntelligenceDetailPage() {
               {fdr.institutionName}
             </span>
             {analysis?.isSyntheticDemo && (
-              <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+              <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-amber-100 text-amber-800 border border-amber-300">
                 SYNTHETIC DEMO FIXTURE
               </span>
             )}
@@ -241,21 +241,21 @@ export default function OfficerIntelligenceDetailPage() {
       {analysis && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Card className="p-4 border-l-4 border-l-[#174EA6]">
-            <span className="text-[11px] font-semibold text-slate-500 uppercase">1. Extraction Completeness</span>
+            <span className="text-[0.6875rem] font-semibold text-slate-500 uppercase">1. Extraction Completeness</span>
             <div className="mt-1 text-xl font-bold text-slate-800">
               {analysis.scorecard?.completeness?.percentage}%
             </div>
-            <div className="text-[11px] text-slate-500 mt-0.5 font-mono">
+            <div className="text-[0.6875rem] text-slate-500 mt-0.5 font-mono">
               {analysis.scorecard?.completeness?.formula}
             </div>
           </Card>
 
           <Card className="p-4 border-l-4 border-l-emerald-500">
-            <span className="text-[11px] font-semibold text-slate-500 uppercase">2. Field Consistency</span>
+            <span className="text-[0.6875rem] font-semibold text-slate-500 uppercase">2. Field Consistency</span>
             <div className="mt-1 text-xl font-bold text-slate-800">
               {analysis.scorecard?.consistency?.matchedCount} Matches
             </div>
-            <div className="text-[11px] text-slate-500 mt-0.5">
+            <div className="text-[0.6875rem] text-slate-500 mt-0.5">
               {analysis.scorecard?.consistency?.mismatchedCount > 0 ? (
                 <span className="text-rose-600 font-bold">{analysis.scorecard?.consistency?.mismatchedCount} Discrepancies</span>
               ) : (
@@ -265,21 +265,21 @@ export default function OfficerIntelligenceDetailPage() {
           </Card>
 
           <Card className="p-4 border-l-4 border-l-amber-500">
-            <span className="text-[11px] font-semibold text-slate-500 uppercase">3. Duplicate Signals</span>
+            <span className="text-[0.6875rem] font-semibold text-slate-500 uppercase">3. Duplicate Signals</span>
             <div className="mt-1 text-base font-bold text-slate-800 truncate">
               {analysis.scorecard?.duplicateSignals?.isDuplicate ? 'Duplicate Collision' : 'Unique Fingerprint'}
             </div>
-            <div className="text-[10px] text-slate-500 mt-0.5 truncate">
+            <div className="text-[0.625rem] text-slate-500 mt-0.5 truncate">
               {analysis.scorecard?.duplicateSignals?.label}
             </div>
           </Card>
 
           <Card className="p-4 border-l-4 border-l-slate-400">
-            <span className="text-[11px] font-semibold text-slate-500 uppercase">4. OCR Readability</span>
+            <span className="text-[0.6875rem] font-semibold text-slate-500 uppercase">4. OCR Readability</span>
             <div className="mt-1 text-base font-bold text-slate-800">
               {analysis.scorecard?.readability?.label}
             </div>
-            <div className="text-[11px] text-slate-500 mt-0.5 font-mono">
+            <div className="text-[0.6875rem] text-slate-500 mt-0.5 font-mono">
               {analysis.scorecard?.readability?.wordCount || 0} recognized words
             </div>
           </Card>
@@ -296,7 +296,7 @@ export default function OfficerIntelligenceDetailPage() {
                 Side-by-Side Verification: Institution Submission vs. Machine OCR Extraction
               </h3>
             </div>
-            <span className="text-[11px] text-slate-500 font-mono">
+            <span className="text-[0.6875rem] text-slate-500 font-mono">
               Document SHA-256: {(analysis.documentSha256 || '').slice(0, 16)}...
             </span>
           </div>
@@ -336,31 +336,31 @@ export default function OfficerIntelligenceDetailPage() {
 
                       <td className="py-3 px-4">
                         {isMatch && (
-                          <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">
+                          <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">
                             <CheckCircle2 className="w-3 h-3" /> Exact Match
                           </span>
                         )}
                         {isMismatch && (
-                          <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-rose-700 bg-rose-50 px-2.5 py-0.5 rounded border border-rose-200">
+                          <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-rose-700 bg-rose-50 px-2.5 py-0.5 rounded border border-rose-200">
                             <XCircle className="w-3 h-3" /> Discrepancy
                           </span>
                         )}
                         {isMissing && (
-                          <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200">
+                          <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200">
                             Missing in Scan
                           </span>
                         )}
                         {isAmbiguous && (
-                          <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded border border-amber-200">
+                          <span className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded border border-amber-200">
                             Ambiguous Text
                           </span>
                         )}
                       </td>
 
-                      <td className="py-3 px-4 text-slate-600 text-[11px]">
+                      <td className="py-3 px-4 text-slate-600 text-[0.6875rem]">
                         <div>Confidence: <span className="font-semibold text-slate-700">{comp.confidenceIndicator}</span></div>
                         {comp.sourceSnippet && (
-                          <div className="font-mono text-[10px] text-slate-500 bg-slate-50 p-1 rounded border border-slate-200 mt-1 max-w-sm truncate">
+                          <div className="font-mono text-[0.625rem] text-slate-500 bg-slate-50 p-1 rounded border border-slate-200 mt-1 max-w-sm truncate">
                             &ldquo;{comp.sourceSnippet}&rdquo;
                           </div>
                         )}
@@ -381,7 +381,7 @@ export default function OfficerIntelligenceDetailPage() {
             <Sparkles className="w-4 h-4 text-[#174EA6]" />
             <span>Documentary Findings & Officer Adjudication Workflow ({analysis?.findings?.length || 0})</span>
           </h3>
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[0.6875rem] text-slate-500">
             Adjudicate discrepancies with mandatory explanatory audit notes
           </span>
         </div>
@@ -404,7 +404,7 @@ export default function OfficerIntelligenceDetailPage() {
                     <div className="space-y-1 flex-1">
                       <div className="flex items-center gap-2">
                         <span
-                          className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
+                          className={`px-2 py-0.5 rounded text-[0.625rem] font-bold uppercase tracking-wider ${
                             f.severity === FINDING_SEVERITY.HIGH
                               ? 'bg-rose-100 text-rose-700 border border-rose-300'
                               : f.severity === FINDING_SEVERITY.MEDIUM
@@ -417,11 +417,11 @@ export default function OfficerIntelligenceDetailPage() {
                         <h4 className="font-bold text-slate-800 text-xs">{f.findingType}</h4>
                       </div>
                       <p className="text-xs text-slate-700 font-medium">{f.explanation}</p>
-                      <p className="text-[11px] text-slate-500">
+                      <p className="text-[0.6875rem] text-slate-500">
                         <strong>Recommended Action:</strong> {f.recommendedAction}
                       </p>
                       {f.evidenceSnippet && (
-                        <div className="font-mono text-[11px] text-slate-600 bg-slate-50 p-2 rounded border border-slate-200 mt-1">
+                        <div className="font-mono text-[0.6875rem] text-slate-600 bg-slate-50 p-2 rounded border border-slate-200 mt-1">
                           Evidence: &ldquo;{f.evidenceSnippet}&rdquo;
                         </div>
                       )}
@@ -429,7 +429,7 @@ export default function OfficerIntelligenceDetailPage() {
 
                     {/* Current Review Status Badge */}
                     <div className="text-right shrink-0">
-                      <span className="text-[10px] uppercase font-bold text-slate-400 block mb-1">Scrutiny State</span>
+                      <span className="text-[0.625rem] uppercase font-bold text-slate-400 block mb-1">Scrutiny State</span>
                       {review.status === REVIEW_STATUS.OPEN && (
                         <span className="px-2.5 py-1 rounded text-xs font-bold bg-slate-100 text-slate-700 border border-slate-200">
                           OPEN
@@ -543,7 +543,7 @@ export default function OfficerIntelligenceDetailPage() {
                   {/* Review Notes & Decision Audit Stream */}
                   {(review.notes?.length > 0 || review.history?.length > 0 || review.reason) && (
                     <div className="p-3 bg-slate-50/70 rounded-lg border border-slate-200 text-xs space-y-2">
-                      <div className="font-semibold text-slate-700 text-[11px] uppercase tracking-wider">
+                      <div className="font-semibold text-slate-700 text-[0.6875rem] uppercase tracking-wider">
                         Scrutiny Audit Stream & Officer Notes
                       </div>
 
@@ -555,11 +555,11 @@ export default function OfficerIntelligenceDetailPage() {
 
                       {review.notes?.map((n) => (
                         <div key={n.noteId} className="p-2 bg-white rounded border border-slate-200 space-y-0.5">
-                          <div className="flex items-center justify-between text-[10px] text-slate-400">
+                          <div className="flex items-center justify-between text-[0.625rem] text-slate-400">
                             <span>{n.actorName} ({n.actorRole})</span>
                             <span>{new Date(n.createdAt).toLocaleString('en-IN')}</span>
                           </div>
-                          <p className="text-slate-800 text-[11px]">{n.text}</p>
+                          <p className="text-slate-800 text-[0.6875rem]">{n.text}</p>
                         </div>
                       ))}
                     </div>
@@ -573,7 +573,7 @@ export default function OfficerIntelligenceDetailPage() {
 
       {/* Action Modal (Dismiss, Resolve, Add Note) */}
       {activeModal && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="app-modal fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-xl space-y-4 animate-in fade-in zoom-in-95">
             <h3 className="text-sm font-bold text-slate-800">
               {activeModal.type === 'DISMISS' && 'Dismiss Finding with Justification'}

@@ -82,7 +82,7 @@ export default function PortalsSection() {
                     </Badge>
                   </div>
 
-                  <div className="text-[11px] font-semibold text-[#505F79] uppercase tracking-wider mb-1">
+                  <div className="text-[0.6875rem] font-semibold text-[#505F79] uppercase tracking-wider mb-1">
                     {t(portal.roleKey)}
                   </div>
 

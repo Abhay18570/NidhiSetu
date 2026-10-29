@@ -424,7 +424,7 @@ export default function FdrSubmissionWizard() {
                   {isPast ? <Check className="w-4 h-4" /> : st.num}
                 </div>
                 <span
-                  className={`text-[10px] font-bold mt-1.5 truncate max-w-full hidden sm:block ${
+                  className={`text-[0.625rem] font-bold mt-1.5 truncate max-w-full hidden sm:block ${
                     isCurrent ? 'text-[#174EA6]' : isPast ? 'text-[#13805E]' : 'text-slate-400'
                   }`}
                 >
@@ -453,21 +453,21 @@ export default function FdrSubmissionWizard() {
 
             <div className="p-4 bg-[#F5F7FB] border border-[#D3DDEB] rounded-xl grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               <div>
-                <span className="text-slate-500 font-semibold uppercase text-[10px]">Institution Legal Name:</span>
+                <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">Institution Legal Name:</span>
                 <div className="font-bold text-[#0B1F54] text-sm mt-0.5">{currentInstitution?.name}</div>
               </div>
               <div>
-                <span className="text-slate-500 font-semibold uppercase text-[10px]">AISHE / Permanent PID:</span>
+                <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">AISHE / Permanent PID:</span>
                 <div className="font-mono font-bold text-[#174EA6] text-sm mt-0.5">{currentInstitution?.aisheCode}</div>
               </div>
               <div>
-                <span className="text-slate-500 font-semibold uppercase text-[10px]">Authorized Representative:</span>
+                <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">Authorized Representative:</span>
                 <div className="font-semibold text-[#0B1F54] mt-0.5">
                   {currentUser?.name} ({currentUser?.designation})
                 </div>
               </div>
               <div>
-                <span className="text-slate-500 font-semibold uppercase text-[10px]">Campus Location:</span>
+                <span className="text-slate-500 font-semibold uppercase text-[0.625rem]">Campus Location:</span>
                 <div className="text-slate-700 mt-0.5">
                   {currentInstitution?.city}, {currentInstitution?.state} - {currentInstitution?.pincode}
                 </div>
@@ -536,7 +536,7 @@ export default function FdrSubmissionWizard() {
                   placeholder="e.g. SBIN0001110"
                   className="w-full px-3.5 py-2.5 bg-[#F5F7FB] border border-[#D3DDEB] rounded-lg text-sm font-mono uppercase text-[#0B1F54] focus:outline-none focus:ring-2 focus:ring-[#174EA6]"
                 />
-                <span className="text-[10px] text-slate-400 mt-0.5 block">Format: 4 letters, 0, 6 letters/digits</span>
+                <span className="text-[0.625rem] text-slate-400 mt-0.5 block">Format: 4 letters, 0, 6 letters/digits</span>
               </div>
 
               <div className="sm:col-span-2">
@@ -614,7 +614,7 @@ export default function FdrSubmissionWizard() {
                   />
                 </div>
                 {formData.depositAmount && (
-                  <span className="text-[11px] font-semibold text-[#13805E] mt-1 block">
+                  <span className="text-[0.6875rem] font-semibold text-[#13805E] mt-1 block">
                     {formatINR(Number(formData.depositAmount))}
                   </span>
                 )}
@@ -778,7 +778,7 @@ export default function FdrSubmissionWizard() {
               <div className="p-3 bg-[#F5F7FB] border border-[#D3DDEB] rounded-lg text-xs flex items-center gap-2 font-mono text-slate-600">
                 <Shield className="w-4 h-4 text-[#13805E] shrink-0" />
                 <span className="font-bold text-[#0B1F54]">SHA-256 Digest:</span>
-                <span className="truncate text-[11px]">{formData.sha256Hash}</span>
+                <span className="truncate text-[0.6875rem]">{formData.sha256Hash}</span>
               </div>
             )}
           </div>
@@ -979,7 +979,7 @@ export default function FdrSubmissionWizard() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
         >
           <div className="bg-white rounded-xl border border-[#D3DDEB] max-w-md w-full p-6 gov-shadow-lg space-y-4">
             <div className="flex items-center gap-3 text-rose-600">

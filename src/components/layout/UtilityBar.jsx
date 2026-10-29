@@ -44,14 +44,14 @@ export default function UtilityBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-1.5 flex flex-wrap items-center justify-between gap-y-2 gap-x-4">
         {/* Prototype & Government-Style Advisory Tag */}
         <div className="flex items-center gap-2 text-slate-200">
-          <span className="inline-block px-1.5 py-0.5 text-[10px] uppercase font-bold tracking-wider bg-[#E89B24] text-[#0B1F54] rounded">
+          <span className="inline-block px-1.5 py-0.5 text-[0.625rem] uppercase font-bold tracking-wider bg-[#E89B24] text-[#0B1F54] rounded">
             Prototype
           </span>
           <span className="hidden sm:inline font-medium text-slate-300">
             {t('util.prototypeLabel', 'Institutional & Regulatory Prototype System')}
           </span>
           <span className="hidden md:inline text-slate-400">|</span>
-          <span className="text-[11px] text-slate-300 font-normal">
+          <span className="text-[0.6875rem] text-slate-300 font-normal">
             {t('util.notOfficial', 'Not an Official Govt Domain')}
           </span>
         </div>
@@ -61,7 +61,7 @@ export default function UtilityBar() {
           {/* Help & Toll-Free Phone */}
           <div className="hidden lg:flex items-center gap-1.5 text-slate-300 hover:text-white">
             <PhoneCall className="w-3.5 h-3.5 text-[#E89B24]" aria-hidden="true" />
-            <span className="text-[11px] font-mono">{SITE_CONFIG.tollFree}</span>
+            <span className="text-[0.6875rem] font-mono">{SITE_CONFIG.tollFree}</span>
           </div>
 
           {/* Text Size Adjustment Controls (A-, A, A+) */}
@@ -137,7 +137,7 @@ export default function UtilityBar() {
                   {highContrast && <Check className="w-4 h-4 text-[#13805E]" />}
                 </button>
 
-                <div className="px-3 py-2 text-[11px] text-[#505F79] bg-slate-50 border-t border-slate-100">
+                <div className="px-3 py-2 text-[0.6875rem] text-[#505F79] bg-slate-50 border-t border-slate-100">
                   <span>{t('util.screenReader', 'Screen Reader Access Compliant')}</span>
                 </div>
               </div>

@@ -175,7 +175,7 @@ export default function OfficerInstitutionIntelligencePage() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
+              <span className="px-2.5 py-0.5 rounded text-[0.6875rem] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
                 Regulatory Dossier
               </span>
               <span className="text-xs text-slate-300 font-mono">
@@ -188,7 +188,7 @@ export default function OfficerInstitutionIntelligencePage() {
             </p>
           </div>
           <div className="p-3 bg-white/10 rounded-xl border border-white/20 text-center shrink-0">
-            <div className="text-[10px] uppercase font-bold text-slate-300">
+            <div className="text-[0.625rem] uppercase font-bold text-slate-300">
               Explainable Risk Priority
             </div>
             <div className="text-xl font-bold mt-0.5 text-amber-300">
@@ -215,7 +215,7 @@ export default function OfficerInstitutionIntelligencePage() {
           <div className="text-2xl font-bold text-slate-900 mt-1">
             ₹{((portfolioSummary.declaredDepositAmountPaise || 0) / 100).toLocaleString('en-IN')}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             Across {portfolioSummary.totalFdrs} registered certificate(s)
           </div>
         </Card>
@@ -225,7 +225,7 @@ export default function OfficerInstitutionIntelligencePage() {
           <div className="text-2xl font-bold text-emerald-700 mt-1">
             ₹{((portfolioSummary.eligibleDepositAmountPaise || 0) / 100).toLocaleString('en-IN')}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             Excludes {portfolioSummary.supersededCount} superseded FDR(s)
           </div>
         </Card>
@@ -241,7 +241,7 @@ export default function OfficerInstitutionIntelligencePage() {
               <span className="text-emerald-600">Adequate</span>
             )}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             Evaluation under active norm rules
           </div>
         </Card>
@@ -251,7 +251,7 @@ export default function OfficerInstitutionIntelligencePage() {
           <div className="text-2xl font-bold text-slate-900 mt-1">
             {portfolioSummary.maturedFdrs}
           </div>
-          <div className="text-[11px] text-slate-500 mt-1">
+          <div className="text-[0.6875rem] text-slate-500 mt-1">
             {portfolioSummary.activeFdrs} certificates active
           </div>
         </Card>
@@ -265,7 +265,7 @@ export default function OfficerInstitutionIntelligencePage() {
         <p className="text-xs text-slate-700 mt-1">{riskPriority?.explanation}</p>
         <div className="mt-3 flex flex-wrap gap-2">
           {riskPriority?.triggeringSignals.map((sig, idx) => (
-            <span key={idx} className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-100 text-slate-800 border">
+            <span key={idx} className="px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-slate-100 text-slate-800 border">
               {sig}
             </span>
           ))}
@@ -302,7 +302,7 @@ export default function OfficerInstitutionIntelligencePage() {
                   <td className="py-2.5 px-3 font-semibold text-slate-900">
                     {fdr.fdrNumber}
                     {fdr.isSuperseded && (
-                      <span className="ml-2 text-[10px] px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-bold">
+                      <span className="ml-2 text-[0.625rem] px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-bold">
                         Superseded
                       </span>
                     )}
@@ -313,7 +313,7 @@ export default function OfficerInstitutionIntelligencePage() {
                   </td>
                   <td className="py-2.5 px-3">{fdr.maturityDate}</td>
                   <td className="py-2.5 px-3">
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">
+                    <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-slate-100 text-slate-700">
                       {fdr.status || fdr.lifecycleStatus}
                     </span>
                   </td>
@@ -339,7 +339,7 @@ export default function OfficerInstitutionIntelligencePage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h3 className="text-sm font-bold text-slate-900">Document Intelligence OCR Findings</h3>
-              <p className="text-[11px] text-slate-500">Scanned receipt anomaly detection</p>
+              <p className="text-[0.6875rem] text-slate-500">Scanned receipt anomaly detection</p>
             </div>
             <ScrollText className="w-4 h-4 text-slate-400" />
           </div>
@@ -353,11 +353,11 @@ export default function OfficerInstitutionIntelligencePage() {
                 <div key={idx} className="p-2.5 rounded bg-slate-50 border text-xs space-y-1">
                   <div className="flex items-center justify-between">
                     <span className="font-semibold text-slate-800">{f.findingType || 'OCR Discrepancy'}</span>
-                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-800">
+                    <span className="text-[0.625rem] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-800">
                       {f.severity || 'MEDIUM'}
                     </span>
                   </div>
-                  <p className="text-[11px] text-slate-600">{f.description || f.message}</p>
+                  <p className="text-[0.6875rem] text-slate-600">{f.description || f.message}</p>
                 </div>
               ))
             )}
@@ -369,7 +369,7 @@ export default function OfficerInstitutionIntelligencePage() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div>
               <h3 className="text-sm font-bold text-slate-900">Simulated Bank Confirmations</h3>
-              <p className="text-[11px] text-slate-500">Synthetic SFMS / CBS confirmation logs</p>
+              <p className="text-[0.6875rem] text-slate-500">Synthetic SFMS / CBS confirmation logs</p>
             </div>
             <Landmark className="w-4 h-4 text-slate-400" />
           </div>
@@ -385,11 +385,11 @@ export default function OfficerInstitutionIntelligencePage() {
                     <span className="font-semibold text-slate-800">
                       {bv.bankName} [SIMULATED]
                     </span>
-                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${bv.lienMarked ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}`}>
+                    <span className={`text-[0.625rem] font-bold px-1.5 py-0.5 rounded ${bv.lienMarked ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}`}>
                       {bv.lienMarked ? 'Lien Confirmed' : 'Lien Not Marked'}
                     </span>
                   </div>
-                  <div className="text-[10px] text-slate-500">Ref: {bv.cbsReferenceNumber || 'CBS-MOCK'}</div>
+                  <div className="text-[0.625rem] text-slate-500">Ref: {bv.cbsReferenceNumber || 'CBS-MOCK'}</div>
                 </div>
               ))
             )}
@@ -402,7 +402,7 @@ export default function OfficerInstitutionIntelligencePage() {
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div>
             <h3 className="text-sm font-bold text-slate-900">Unified Cross-Module Evidence Timeline</h3>
-            <p className="text-[11px] text-slate-500">Chronological history from Modules 03 through 07</p>
+            <p className="text-[0.6875rem] text-slate-500">Chronological history from Modules 03 through 07</p>
           </div>
           <Calendar className="w-4 h-4 text-slate-400" />
         </div>
@@ -414,12 +414,12 @@ export default function OfficerInstitutionIntelligencePage() {
           ) : (
             evidenceTimeline.slice(0, 10).map((evt) => (
               <div key={evt.eventId} className="py-2.5 flex items-start gap-3 text-xs">
-                <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-mono shrink-0 mt-0.5">
+                <span className="text-[0.625rem] px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-mono shrink-0 mt-0.5">
                   {new Date(evt.timestamp).toISOString().split('T')[0]}
                 </span>
                 <div className="space-y-0.5">
                   <div className="font-semibold text-slate-800">{evt.summary}</div>
-                  <div className="text-[10px] text-slate-500">
+                  <div className="text-[0.625rem] text-slate-500">
                     Actor: {evt.actor} • Type: {evt.eventType} • Module: {evt.sourceModule}
                   </div>
                 </div>
@@ -449,7 +449,7 @@ export default function OfficerInstitutionIntelligencePage() {
           <div className="space-y-2 mt-3">
             {savedNotes.map((note) => (
               <div key={note.id} className="p-2.5 rounded bg-slate-50 border text-xs">
-                <div className="flex items-center justify-between font-semibold text-slate-800 text-[11px]">
+                <div className="flex items-center justify-between font-semibold text-slate-800 text-[0.6875rem]">
                   <span>{note.author}</span>
                   <span className="text-slate-400">{new Date(note.date).toLocaleString()}</span>
                 </div>

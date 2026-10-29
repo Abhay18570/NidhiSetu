@@ -242,7 +242,7 @@ export default function OfficerBankVerificationDetailPage() {
         <div className="flex items-start gap-3">
           <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="text-xs text-amber-900 leading-relaxed">
-            <span className="font-bold uppercase tracking-wider block text-amber-800 text-[11px]">
+            <span className="font-bold uppercase tracking-wider block text-amber-800 text-[0.6875rem]">
               {SIMULATION_DISCLAIMER}
             </span>
             All responses, financial message structures, ledger values, and lien confirmations shown on this page are
@@ -338,7 +338,7 @@ export default function OfficerBankVerificationDetailPage() {
               </span>
             </div>
             <div className="border-t border-slate-100 pt-2">
-              <span className="text-slate-500 block text-[11px]">Audit / Statutory Reason:</span>
+              <span className="text-slate-500 block text-[0.6875rem]">Audit / Statutory Reason:</span>
               <p className="mt-1 text-slate-700 bg-slate-50 p-2 rounded border border-slate-200 leading-relaxed">
                 {request.officerReason}
               </p>
@@ -369,7 +369,7 @@ export default function OfficerBankVerificationDetailPage() {
               <span className="font-bold text-[#0B1F54]">{request.maturityDate}</span>
             </div>
             <div className="border-t border-slate-100 pt-2">
-              <span className="text-slate-500 block text-[11px]">Declared Account Holder:</span>
+              <span className="text-slate-500 block text-[0.6875rem]">Declared Account Holder:</span>
               <span className="font-semibold text-[#0B1F54] mt-0.5 block">{request.accountHolderName}</span>
             </div>
             {fdr && (
@@ -467,7 +467,7 @@ export default function OfficerBankVerificationDetailPage() {
         {/* Comparison Table */}
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[10px] tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[0.625rem] tracking-wider">
               <tr>
                 <th className="py-2.5 px-3">Field</th>
                 <th className="py-2.5 px-3">Submitted Value (Inst.)</th>
@@ -628,7 +628,7 @@ export default function OfficerBankVerificationDetailPage() {
                 )}
               </span>
             </div>
-            <p className="text-[11px] text-slate-600 pt-1 border-t border-slate-200">
+            <p className="text-[0.6875rem] text-slate-600 pt-1 border-t border-slate-200">
               {summaryScorecard?.lienEvaluation?.explanation}
             </p>
           </div>
@@ -675,7 +675,7 @@ export default function OfficerBankVerificationDetailPage() {
               }`}
             >
               {m.messageType === 'MOCK_FDR_VERIFY_REQUEST' ? 'REQ (Inquiry)' : 'RESP (Confirmation)'} —{' '}
-              <span className="font-mono text-[10px]">{m.messageId}</span>
+              <span className="font-mono text-[0.625rem]">{m.messageId}</span>
             </button>
           ))}
         </div>
@@ -686,19 +686,19 @@ export default function OfficerBankVerificationDetailPage() {
             {/* Header info */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200 text-xs">
               <div>
-                <span className="text-slate-400 block text-[10px] uppercase font-bold">Message ID</span>
+                <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Message ID</span>
                 <span className="font-mono font-bold text-[#174EA6]">{activeMessage.messageId}</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-[10px] uppercase font-bold">Schema Version</span>
+                <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Schema Version</span>
                 <span className="font-mono text-slate-700">{activeMessage.schemaVersion}</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-[10px] uppercase font-bold">Simulation Mode</span>
+                <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Simulation Mode</span>
                 <span className="font-bold text-amber-600">TRUE (Synthetic)</span>
               </div>
               <div>
-                <span className="text-slate-400 block text-[10px] uppercase font-bold">Schema Validation</span>
+                <span className="text-slate-400 block text-[0.625rem] uppercase font-bold">Schema Validation</span>
                 <span className="font-bold text-emerald-600">
                   {activeMessage.validationStatus || 'VALID'}
                 </span>
@@ -707,7 +707,7 @@ export default function OfficerBankVerificationDetailPage() {
 
             {/* JSON Code Viewer */}
             <div className="relative">
-              <pre className="p-4 bg-slate-900 text-slate-100 rounded-xl text-[11px] font-mono overflow-x-auto max-h-80 leading-relaxed">
+              <pre className="p-4 bg-slate-900 text-slate-100 rounded-xl text-[0.6875rem] font-mono overflow-x-auto max-h-80 leading-relaxed">
                 {JSON.stringify(activeMessage, null, 2)}
               </pre>
             </div>
@@ -817,11 +817,11 @@ export default function OfficerBankVerificationDetailPage() {
                       Action:{' '}
                       <span className="text-[#174EA6] font-mono">{rev.reviewAction}</span>
                     </span>
-                    <span className="text-[10px] text-slate-400 font-mono">
+                    <span className="text-[0.625rem] text-slate-400 font-mono">
                       {new Date(rev.createdAt).toLocaleString()}
                     </span>
                   </div>
-                  <div className="text-[11px] text-slate-600">
+                  <div className="text-[0.6875rem] text-slate-600">
                     Recorded by Officer: <strong>{rev.officerId}</strong>
                   </div>
                   {rev.reason && (
@@ -851,13 +851,13 @@ export default function OfficerBankVerificationDetailPage() {
         <div className="space-y-3">
           {request.statusHistory?.map((item, idx) => (
             <div key={idx} className="flex items-start gap-3 text-xs">
-              <div className="w-6 h-6 rounded-full bg-blue-100 text-[#174EA6] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
+              <div className="w-6 h-6 rounded-full bg-blue-100 text-[#174EA6] flex items-center justify-center font-bold text-[0.625rem] shrink-0 mt-0.5">
                 {idx + 1}
               </div>
               <div className="flex-1 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
                 <div className="flex justify-between items-center">
                   <span className="font-bold text-[#0B1F54]">{item.status}</span>
-                  <span className="text-[10px] font-mono text-slate-400">
+                  <span className="text-[0.625rem] font-mono text-slate-400">
                     {new Date(item.timestamp).toLocaleString()}
                   </span>
                 </div>
@@ -870,7 +870,7 @@ export default function OfficerBankVerificationDetailPage() {
 
       {/* REVIEW ACTION MODAL DIALOG */}
       {actionModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-150">
+        <div className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-150">
           <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden">
             <div className="p-5 border-b border-slate-100 flex items-center justify-between">
               <div>

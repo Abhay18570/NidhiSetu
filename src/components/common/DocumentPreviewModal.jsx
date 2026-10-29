@@ -61,7 +61,7 @@ export default function DocumentPreviewModal({
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150"
+      className="app-modal fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-sm animate-in fade-in duration-150"
     >
       <div className="bg-white rounded-2xl border border-[#D3DDEB] max-w-4xl w-full h-[90vh] flex flex-col gov-shadow-xl overflow-hidden">
         {/* Header */}
@@ -72,7 +72,7 @@ export default function DocumentPreviewModal({
             </div>
             <div className="truncate">
               <div className="text-sm font-bold truncate">{fileName}</div>
-              <div className="text-[11px] text-slate-300 flex items-center gap-2">
+              <div className="text-[0.6875rem] text-slate-300 flex items-center gap-2">
                 <span>{formatSize(fileSize)}</span>
                 <span>&bull;</span>
                 <span className="uppercase">{fileType || 'Document'}</span>
@@ -108,7 +108,7 @@ export default function DocumentPreviewModal({
           <div className="flex items-center gap-2 font-mono truncate">
             <Shield className="w-3.5 h-3.5 text-[#13805E] shrink-0" />
             <span className="font-semibold text-[#0B1F54]">SHA-256 Fingerprint:</span>
-            <span className="truncate text-[11px]">
+            <span className="truncate text-[0.6875rem]">
               {sha256Hash || 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'}
             </span>
           </div>
@@ -180,12 +180,12 @@ export default function DocumentPreviewModal({
                   <span className="text-slate-500">Integrity:</span>
                   <span className="text-[#13805E] font-bold">SHA-256 Validated</span>
                 </div>
-                <div className="text-[11px] text-slate-500 pt-1">
+                <div className="text-[0.6875rem] text-slate-500 pt-1">
                   This mock document record is backed by the prototype storage schema.
                 </div>
               </div>
 
-              <div className="text-[11px] text-[#C67C11] bg-amber-50 border border-amber-200 p-2.5 rounded-lg flex items-center gap-2">
+              <div className="text-[0.6875rem] text-[#C67C11] bg-amber-50 border border-amber-200 p-2.5 rounded-lg flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>IndexedDB prototype storage active. Real financial documents are not uploaded.</span>
               </div>
@@ -195,7 +195,7 @@ export default function DocumentPreviewModal({
 
         {/* Footer */}
         <div className="p-3 sm:px-6 bg-white border-t border-[#D3DDEB] flex items-center justify-between shrink-0">
-          <div className="text-[11px] text-slate-500 hidden sm:block">
+          <div className="text-[0.6875rem] text-slate-500 hidden sm:block">
             NidhiSetu Document Repository &bull; Ingestion Hash Verification
           </div>
           <Button onClick={onClose} variant="primary" size="sm" className="font-bold ml-auto">

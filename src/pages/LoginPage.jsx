@@ -248,7 +248,7 @@ export default function LoginPage() {
                     <Sparkles className="w-3.5 h-3.5 text-[#E89B24]" />
                     <span>Demo Profile: {activeDemoInfo.name}</span>
                   </div>
-                  <div className="text-[11px] text-[#505F79] font-mono mt-0.5">
+                  <div className="text-[0.6875rem] text-[#505F79] font-mono mt-0.5">
                     {activeDemoInfo.email} &bull; Code: {activeDemoInfo.accessCode}
                   </div>
                 </div>
@@ -394,7 +394,7 @@ export default function LoginPage() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
+          className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
         >
           <div className="bg-white rounded-xl border border-[#D3DDEB] max-w-md w-full p-6 gov-shadow-lg space-y-4">
             <div className="flex items-center gap-3 text-[#174EA6]">

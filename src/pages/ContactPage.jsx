@@ -211,7 +211,7 @@ export default function ContactPage() {
                   <div>
                     <div className="font-bold text-[#0B1F54]">National Toll-Free Line:</div>
                     <div className="font-mono text-sm text-[#174EA6] font-bold">{SITE_CONFIG.tollFree}</div>
-                    <div className="text-[11px] text-[#505F79]">{t('contact.helplineDesc')}</div>
+                    <div className="text-[0.6875rem] text-[#505F79]">{t('contact.helplineDesc')}</div>
                   </div>
                 </div>
 

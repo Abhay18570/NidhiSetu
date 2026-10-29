@@ -57,7 +57,7 @@ export default function NotificationMenu() {
   };
 
   return (
-    <div className="relative" ref={menuRef}>
+    <div className="static sm:relative" ref={menuRef}>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
@@ -67,7 +67,7 @@ export default function NotificationMenu() {
       >
         <Bell className="w-5 h-5" />
         {unreadCount > 0 && (
-          <span className="absolute top-1 right-1 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-[#E89B24] text-[#0B1F54] text-[10px] font-black leading-none">
+          <span className="absolute top-1 right-1 flex h-4 min-w-[1rem] px-1 items-center justify-center rounded-full bg-[#E89B24] text-[#0B1F54] text-[0.625rem] font-black leading-none">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>
         )}
@@ -75,7 +75,7 @@ export default function NotificationMenu() {
 
       {isOpen && (
         <div
-          className="absolute right-0 mt-2 w-80 sm:w-96 bg-white rounded-xl shadow-xl border border-[#D3DDEB] py-2 z-50 text-xs animate-in fade-in zoom-in-95 duration-100"
+          className="absolute right-4 top-full sm:right-0 sm:top-auto mt-2 w-80 sm:w-96 max-w-[calc(100vw-2rem)] bg-white rounded-xl shadow-xl border border-[#D3DDEB] py-2 z-50 text-xs animate-in fade-in zoom-in-95 duration-100"
           role="dialog"
           aria-label="Notifications Panel"
         >
@@ -83,7 +83,7 @@ export default function NotificationMenu() {
             <div className="flex items-center gap-2">
               <span className="font-bold text-[#0B1F54] text-sm">Notifications</span>
               {unreadCount > 0 && (
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#E8F0FE] text-[#174EA6]">
+                <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-[#E8F0FE] text-[#174EA6]">
                   {unreadCount} new
                 </span>
               )}
@@ -92,7 +92,7 @@ export default function NotificationMenu() {
               <button
                 type="button"
                 onClick={handleMarkAllRead}
-                className="text-[11px] font-semibold text-[#174EA6] hover:underline flex items-center gap-1"
+                className="text-[0.6875rem] font-semibold text-[#174EA6] hover:underline flex items-center gap-1"
               >
                 <CheckCheck className="w-3.5 h-3.5" />
                 <span>Mark all read</span>
@@ -126,10 +126,10 @@ export default function NotificationMenu() {
                           <span className="w-2 h-2 rounded-full bg-[#174EA6] shrink-0" />
                         )}
                       </div>
-                      <p className="text-[11px] text-[#505F79] mt-0.5 leading-relaxed line-clamp-2">
+                      <p className="text-[0.6875rem] text-[#505F79] mt-0.5 leading-relaxed line-clamp-2">
                         {notif.message}
                       </p>
-                      <span className="text-[10px] text-slate-400 mt-1 block">
+                      <span className="text-[0.625rem] text-slate-400 mt-1 block">
                         {new Date(notif.createdAt).toLocaleDateString()}
                       </span>
                     </div>
@@ -143,7 +143,7 @@ export default function NotificationMenu() {
             <Link
               to={currentRole === 'institution' ? '/institution/notifications' : '#'}
               onClick={() => setIsOpen(false)}
-              className="text-[11px] font-bold text-[#174EA6] hover:underline"
+              className="text-[0.6875rem] font-bold text-[#174EA6] hover:underline"
             >
               View All Notifications
             </Link>

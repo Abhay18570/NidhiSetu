@@ -314,7 +314,7 @@ export default function RenewalRequestWizard() {
       </div>
 
       {/* Wizard Step Content */}
-      <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm min-h-[360px]">
+      <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm min-h-[22.5rem]">
         {/* Step 1: Original FDR Details */}
         {currentStep === 1 && (
           <div className="space-y-4">
@@ -355,7 +355,7 @@ export default function RenewalRequestWizard() {
                 </div>
                 <div>
                   <span className="text-gray-500 block">Current Lifecycle Status:</span>
-                  <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 inline-block">
+                  <span className="px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-emerald-100 text-emerald-800 inline-block">
                     {originalFdr.status || 'ACTIVE'}
                   </span>
                 </div>
@@ -458,7 +458,7 @@ export default function RenewalRequestWizard() {
                   onChange={(e) => setProposedMaturityDate(e.target.value)}
                   className="w-full text-xs p-2.5 border border-gray-300 rounded focus:ring-1 focus:ring-[#174EA6]"
                 />
-                <p className="text-[11px] text-gray-500">
+                <p className="text-[0.6875rem] text-gray-500">
                   Must be after current maturity date ({originalFdr.maturityDate}). Minimum recommended duration: 36–60 months.
                 </p>
               </div>
@@ -485,7 +485,7 @@ export default function RenewalRequestWizard() {
                         >
                           <div>
                             <div className="font-bold text-gray-900">{rep.fdrNumber}</div>
-                            <div className="text-[11px] text-gray-500">
+                            <div className="text-[0.6875rem] text-gray-500">
                               {rep.bankName} • Maturity: {rep.maturityDate}
                             </div>
                           </div>
@@ -581,19 +581,19 @@ export default function RenewalRequestWizard() {
 
                 <div className="grid grid-cols-3 gap-3 text-center">
                   <div className="p-3 bg-gray-50 rounded border border-gray-200">
-                    <span className="text-[11px] text-gray-500 block">Coverage Before</span>
+                    <span className="text-[0.6875rem] text-gray-500 block">Coverage Before</span>
                     <span className="text-sm font-bold text-gray-800">
                       ₹{(continuityResult.coverageBeforeRenewal / 100).toLocaleString('en-IN')}
                     </span>
                   </div>
                   <div className="p-3 bg-gray-50 rounded border border-gray-200">
-                    <span className="text-[11px] text-gray-500 block">Coverage During</span>
+                    <span className="text-[0.6875rem] text-gray-500 block">Coverage During</span>
                     <span className="text-sm font-bold text-gray-800">
                       ₹{(continuityResult.coverageDuringTransition / 100).toLocaleString('en-IN')}
                     </span>
                   </div>
                   <div className="p-3 bg-gray-50 rounded border border-gray-200">
-                    <span className="text-[11px] text-gray-500 block">Coverage After</span>
+                    <span className="text-[0.6875rem] text-gray-500 block">Coverage After</span>
                     <span className="text-sm font-bold text-gray-800">
                       ₹{(continuityResult.coverageAfterRenewal / 100).toLocaleString('en-IN')}
                     </span>
@@ -604,7 +604,7 @@ export default function RenewalRequestWizard() {
                   <div className="p-3 bg-rose-50 border border-rose-200 rounded text-xs text-rose-900 space-y-1">
                     <span className="font-semibold">Identified Uncovered Windows:</span>
                     {continuityResult.uncoveredIntervals.map((gap, i) => (
-                      <div key={i} className="text-[11px]">
+                      <div key={i} className="text-[0.6875rem]">
                         • {gap.startDate} to {gap.endDate || 'Ongoing'}: {gap.reason}
                       </div>
                     ))}

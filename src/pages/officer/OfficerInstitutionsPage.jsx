@@ -86,7 +86,7 @@ export default function OfficerInstitutionsPage() {
       <Card className="p-0 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50 border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[10px]">
+            <thead className="bg-slate-50 border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[0.625rem]">
               <tr>
                 <th className="px-4 py-3">Institution Name & Type</th>
                 <th className="px-3 py-3">AISHE / PID</th>
@@ -108,19 +108,19 @@ export default function OfficerInstitutionsPage() {
                   <tr key={inst.id} className="hover:bg-slate-50 transition-colors">
                     <td className="px-4 py-3">
                       <div className="font-bold text-[#0B1F54]">{inst.name}</div>
-                      <div className="text-[11px] text-[#505F79]">{inst.type}</div>
+                      <div className="text-[0.6875rem] text-[#505F79]">{inst.type}</div>
                     </td>
                     <td className="px-3 py-3 font-mono">
                       <div className="font-bold text-[#174EA6]">{inst.aisheCode}</div>
-                      <div className="text-[10px] text-slate-400">{inst.aictePid || 'No PID'}</div>
+                      <div className="text-[0.625rem] text-slate-400">{inst.aictePid || 'No PID'}</div>
                     </td>
                     <td className="px-3 py-3">
                       <div>{inst.city}, {inst.state}</div>
-                      <div className="text-[10px] text-slate-400">PIN: {inst.pincode}</div>
+                      <div className="text-[0.625rem] text-slate-400">PIN: {inst.pincode}</div>
                     </td>
                     <td className="px-3 py-3">
                       <div className="font-medium">{inst.representativeName}</div>
-                      <div className="text-[10px] text-slate-500">{inst.representativeDesignation}</div>
+                      <div className="text-[0.625rem] text-slate-500">{inst.representativeDesignation}</div>
                     </td>
                     <td className="px-3 py-3">
                       <Badge variant={inst.status === 'active' ? 'green' : 'gray'} size="sm">
@@ -151,12 +151,12 @@ export default function OfficerInstitutionsPage() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
+          className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-150"
         >
           <div className="bg-white rounded-2xl border border-[#D3DDEB] max-w-2xl w-full p-6 gov-shadow-xl space-y-6 max-h-[90vh] overflow-y-auto">
             <div className="flex items-start justify-between border-b border-slate-100 pb-4">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-[#174EA6]">
+                <span className="text-[0.625rem] font-bold uppercase tracking-wider text-[#174EA6]">
                   Institutional Scrutiny Dossier
                 </span>
                 <h2 className="text-xl font-bold text-[#0B1F54] mt-0.5">
@@ -201,7 +201,7 @@ export default function OfficerInstitutionsPage() {
               <div className="p-3 bg-[#F5F7FB] rounded-lg">
                 <span className="text-slate-500 block">Authorized Representative:</span>
                 <span className="font-bold text-[#0B1F54] text-sm">{selectedInst.representativeName}</span>
-                <span className="text-slate-500 block text-[11px]">{selectedInst.representativeDesignation}</span>
+                <span className="text-slate-500 block text-[0.6875rem]">{selectedInst.representativeDesignation}</span>
               </div>
 
               <div className="p-3 bg-[#F5F7FB] rounded-lg">

@@ -203,7 +203,7 @@ export default function OfficerBankVerificationsPage() {
         <div className="flex items-start gap-3">
           <ShieldAlert className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="text-xs text-amber-900 leading-relaxed">
-            <span className="font-bold uppercase tracking-wider block text-amber-800 text-[11px]">
+            <span className="font-bold uppercase tracking-wider block text-amber-800 text-[0.6875rem]">
               {SIMULATION_DISCLAIMER}
             </span>
             This workspace provides a client-side synthetic simulation of institutional commercial bank deposit
@@ -242,35 +242,35 @@ export default function OfficerBankVerificationsPage() {
       {/* KPI Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <Card className="p-4 border-l-4 border-l-[#174EA6] space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Total Inquiries
           </div>
           <div className="text-2xl font-black text-[#0B1F54]">{stats.totalRequests}</div>
-          <div className="text-[11px] text-slate-500">Initiated simulation records</div>
+          <div className="text-[0.6875rem] text-slate-500">Initiated simulation records</div>
         </Card>
 
         <Card className="p-4 border-l-4 border-l-amber-500 space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Pending / In Flight
           </div>
           <div className="text-2xl font-black text-amber-600">{stats.pendingRequests}</div>
-          <div className="text-[11px] text-slate-500">Awaiting simulator turnaround</div>
+          <div className="text-[0.6875rem] text-slate-500">Awaiting simulator turnaround</div>
         </Card>
 
         <Card className="p-4 border-l-4 border-l-emerald-600 space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Responses Received
           </div>
           <div className="text-2xl font-black text-emerald-600">{stats.responsesReceived}</div>
-          <div className="text-[11px] text-slate-500">Available for officer review</div>
+          <div className="text-[0.6875rem] text-slate-500">Available for officer review</div>
         </Card>
 
         <Card className="p-4 border-l-4 border-l-rose-500 space-y-1">
-          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+          <div className="text-[0.6875rem] font-bold text-slate-400 uppercase tracking-wider">
             Requires Follow-Up
           </div>
           <div className="text-2xl font-black text-rose-600">{stats.requiresFollowUp}</div>
-          <div className="text-[11px] text-slate-500">Flagged with discrepancies</div>
+          <div className="text-[0.6875rem] text-slate-500">Flagged with discrepancies</div>
         </Card>
       </div>
 
@@ -366,7 +366,7 @@ export default function OfficerBankVerificationsPage() {
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[10px] tracking-wider">
+              <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-600 font-bold uppercase text-[0.625rem] tracking-wider">
                 <tr>
                   <th className="py-3 px-4">Request Ref</th>
                   <th className="py-3 px-4">FDR Instrument</th>
@@ -383,45 +383,45 @@ export default function OfficerBankVerificationsPage() {
                   <tr key={req.requestId} className="hover:bg-slate-50/70 transition-colors">
                     <td className="py-3 px-4">
                       <div className="font-mono font-bold text-[#174EA6]">{req.requestReference}</div>
-                      <div className="text-[10px] text-slate-400">
+                      <div className="text-[0.625rem] text-slate-400">
                         {new Date(req.createdAt).toLocaleDateString()}
                       </div>
                     </td>
 
                     <td className="py-3 px-4">
                       <div className="font-bold text-[#0B1F54]">{req.fdrNumber}</div>
-                      <div className="text-[11px] text-slate-500 truncate max-w-[180px]">
+                      <div className="text-[0.6875rem] text-slate-500 truncate max-w-[11.25rem]">
                         {req.institutionName}
                       </div>
-                      <div className="text-[10px] text-emerald-700 font-semibold">
+                      <div className="text-[0.625rem] text-emerald-700 font-semibold">
                         {formatINR(req.declaredAmountPaise, true)}
                       </div>
                     </td>
 
                     <td className="py-3 px-4">
                       <div className="font-semibold text-slate-800">{req.bankName}</div>
-                      <span className="inline-block text-[10px] font-mono text-slate-400">
+                      <span className="inline-block text-[0.625rem] font-mono text-slate-400">
                         {req.simulatorBankId}
                       </span>
                     </td>
 
                     <td className="py-3 px-4">
-                      <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">
+                      <span className="px-2 py-0.5 rounded text-[0.6875rem] font-semibold bg-slate-100 text-slate-700">
                         {req.scenarioId ? req.scenarioId.replace('SCENARIO_', '') : 'EXACT_MATCH'}
                       </span>
                     </td>
 
                     <td className="py-3 px-4">
                       {req.requestStatus === 'RESPONSE_RECEIVED' ? (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
+                        <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-blue-50 text-blue-700 border border-blue-200">
                           RESPONSE RECEIVED
                         </span>
                       ) : req.requestStatus === 'RESPONSE_FAILED' ? (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200">
+                        <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-rose-50 text-rose-700 border border-rose-200">
                           RESPONSE FAILED
                         </span>
                       ) : (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                        <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-amber-50 text-amber-700 border border-amber-200">
                           {req.requestStatus}
                         </span>
                       )}
@@ -429,19 +429,19 @@ export default function OfficerBankVerificationsPage() {
 
                     <td className="py-3 px-4">
                       {req.reviewStatus === 'REVIEW_COMPLETED' ? (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
                           REVIEW COMPLETED
                         </span>
                       ) : req.reviewStatus === 'REQUIRES_FOLLOW_UP' ? (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200">
+                        <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-rose-50 text-rose-700 border border-rose-200">
                           REQUIRES FOLLOW-UP
                         </span>
                       ) : req.reviewStatus === 'UNDER_REVIEW' ? (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">
+                        <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-purple-50 text-purple-700 border border-purple-200">
                           UNDER REVIEW
                         </span>
                       ) : (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">
+                        <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-slate-100 text-slate-600">
                           PENDING REVIEW
                         </span>
                       )}
@@ -468,7 +468,7 @@ export default function OfficerBankVerificationsPage() {
 
       {/* NEW VERIFICATION INQUIRY MODAL WIZARD */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-150">
+        <div className="app-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-150">
           <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="p-5 border-b border-slate-100 flex items-center justify-between">
@@ -560,7 +560,7 @@ export default function OfficerBankVerificationsPage() {
                     </option>
                   ))}
                 </select>
-                <p className="text-[11px] text-slate-500 italic">
+                <p className="text-[0.6875rem] text-slate-500 italic">
                   {SIMULATION_SCENARIOS[selectedScenarioId]?.description}
                 </p>
               </div>

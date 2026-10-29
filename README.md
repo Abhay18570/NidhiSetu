@@ -38,6 +38,32 @@ access on first use to download Tesseract's worker, engine, and language data;
 Google Fonts also requires internet access. Production static hosting must
 rewrite application routes to `index.html` so dashboard links work on refresh.
 
+## Responsive display scale
+
+The shared stylesheet (`src/index.css`) sets the default visual scale using
+rem-based sizing, without CSS zoom or an application-wide transform:
+
+| Viewport width | Default scale | Default root font size |
+| --- | --- | --- |
+| Below 768px | 100% | 16px |
+| 768–1023px | 112.5% | 18px |
+| 1024–1279px | 125% | 20px |
+| 1280px and above | 150% | 24px |
+
+The A− / A / A+ accessibility controls apply relative to this default. Reset
+returns to the responsive default, not a forced 16px desktop size. Existing
+saved text preferences still apply. Print uses normal sizing.
+
+Tailwind layout breakpoints allow enlarged content to reflow: `sm` 640px,
+`md` 864px, `lg` 1536px, `xl` 1920px, and `2xl` 2304px (at the browser's
+default font size). Navigation uses a menu/drawer until enough space is
+available. Wide tables retain their own horizontal scroll containers.
+
+For new UI, use Tailwind's rem-based utilities or rem values rather than fixed
+pixel text and dimensions. Keep viewport units for fullscreen overlays and
+hairline borders in pixels. Modal overlays use `app-modal` to constrain their
+panels to the viewport and keep long forms scrollable.
+
 ## 📌 Module Status Overview
 
 - ✅ **Module 01: Government-Style Public Website & Design System** — Completed

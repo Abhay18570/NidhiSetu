@@ -134,7 +134,7 @@ export default function HeroCarousel({ children }) {
             aria-label={t(paused ? 'hero.resume' : 'hero.pause')}
             onClick={() => setPaused((previous) => !previous)}
           >
-            {paused ? <Play size={15} aria-hidden="true" /> : <Pause size={15} aria-hidden="true" />}
+            {paused ? <Play className="w-4 h-4" aria-hidden="true" /> : <Pause className="w-4 h-4" aria-hidden="true" />}
           </button>
         )}
       </div>

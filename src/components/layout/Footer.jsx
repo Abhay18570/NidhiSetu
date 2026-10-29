@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {/* Column 1: Brand & Mission */}
           <div className="space-y-4">
-            <Logo size="default" light={true} showTagline={false} />
+            <Logo size="default" variant="dark" />
             
             <p className="text-xs leading-relaxed text-slate-300">
               {t('footer.brandDesc')}
@@ -116,7 +116,7 @@ export default function Footer() {
                 <div>
                   <div className="text-white font-semibold">Toll-Free National Helpline</div>
                   <div className="font-mono text-slate-200">{SITE_CONFIG.tollFree}</div>
-                  <div className="text-[11px] text-slate-400">{SITE_CONFIG.hours}</div>
+                  <div className="text-[0.6875rem] text-slate-400">{SITE_CONFIG.hours}</div>
                 </div>
               </div>
 
@@ -124,13 +124,13 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#E89B24] shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
                   <div className="text-white font-semibold">Technical Support</div>
-                  <div className="font-mono text-[11px] text-slate-300">nidhisetu-support@demo.in</div>
+                  <div className="font-mono text-[0.6875rem] text-slate-300">nidhisetu-support@demo.in</div>
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#E89B24] shrink-0 mt-0.5" aria-hidden="true" />
-                <div className="text-[11px] text-slate-300 leading-snug">
+                <div className="text-[0.6875rem] text-slate-300 leading-snug">
                   {SITE_CONFIG.officeAddress}
                 </div>
               </div>
@@ -141,10 +141,10 @@ export default function Footer() {
         {/* Prototype Warning Banner */}
         <div className="mt-8 pt-6 border-t border-white/10 text-xs bg-black/20 p-4 rounded-lg">
           <div className="flex items-start gap-3">
-            <span className="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-[#E89B24] text-[#0B1F54] shrink-0 mt-0.5">
+            <span className="px-2 py-0.5 rounded text-[0.625rem] uppercase font-bold tracking-wider bg-[#E89B24] text-[#0B1F54] shrink-0 mt-0.5">
               Disclaimer
             </span>
-            <p className="text-slate-300 text-[11px] leading-relaxed">
+            <p className="text-slate-300 text-[0.6875rem] leading-relaxed">
               {t('footer.disclaimer')}
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function Footer() {
       </div>
 
       {/* Lower Footer: Compliance Links & Copyright */}
-      <div className="bg-[#071438] border-t border-white/10 text-[11px] py-4 text-slate-400">
+      <div className="bg-[#071438] border-t border-white/10 text-[0.6875rem] py-4 text-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div>
             <span>© 2026 NidhiSetu. {t('footer.rights')}</span>

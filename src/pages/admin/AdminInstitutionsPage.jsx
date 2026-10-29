@@ -50,7 +50,7 @@ export default function AdminInstitutionsPage() {
       <Card className="p-0 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50 border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[10px]">
+            <thead className="bg-slate-50 border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[0.625rem]">
               <tr>
                 <th className="px-4 py-3">Institution Name</th>
                 <th className="px-3 py-3">AISHE Code</th>
@@ -65,7 +65,7 @@ export default function AdminInstitutionsPage() {
                 <tr key={inst.id} className="hover:bg-slate-50">
                   <td className="px-4 py-3">
                     <div className="font-bold">{inst.name}</div>
-                    <div className="text-[11px] text-[#505F79]">{inst.type}</div>
+                    <div className="text-[0.6875rem] text-[#505F79]">{inst.type}</div>
                   </td>
                   <td className="px-3 py-3 font-mono font-bold text-[#174EA6]">
                     {inst.aisheCode}
@@ -75,7 +75,7 @@ export default function AdminInstitutionsPage() {
                   </td>
                   <td className="px-3 py-3">
                     <div>{inst.representativeName}</div>
-                    <div className="text-[10px] text-slate-500">{inst.representativeEmail}</div>
+                    <div className="text-[0.625rem] text-slate-500">{inst.representativeEmail}</div>
                   </td>
                   <td className="px-3 py-3">
                     <Badge variant={inst.status === 'active' ? 'green' : 'gray'} size="sm">

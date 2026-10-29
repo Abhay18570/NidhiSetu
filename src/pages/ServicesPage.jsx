@@ -237,8 +237,8 @@ export default function ServicesPage() {
                           {st.status === 'current' && <Clock className="w-3.5 h-3.5 animate-spin" />}
                           <span>Stage 0{i + 1}</span>
                         </div>
-                        <div className="text-[11px] leading-tight text-[#0B1F54] font-medium">{st.name}</div>
-                        <div className="text-[10px] text-[#505F79] mt-1">{st.date}</div>
+                        <div className="text-[0.6875rem] leading-tight text-[#0B1F54] font-medium">{st.name}</div>
+                        <div className="text-[0.625rem] text-[#505F79] mt-1">{st.date}</div>
                       </div>
                     ))}
                   </div>

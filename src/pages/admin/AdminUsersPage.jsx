@@ -84,14 +84,14 @@ export default function AdminUsersPage() {
           <span className="font-bold text-xs text-[#0B1F54] uppercase tracking-wider">
             Registered Demo Users ({users.length})
           </span>
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[0.6875rem] text-slate-500">
             *Safety Rule Enforced: Last Admin cannot be deactivated
           </span>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[10px]">
+            <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[0.625rem]">
               <tr>
                 <th className="px-4 py-3">Full Name & Office</th>
                 <th className="px-3 py-3">Role</th>
@@ -110,12 +110,12 @@ export default function AdminUsersPage() {
                       <div className="font-bold flex items-center gap-1.5">
                         <span>{u.name}</span>
                         {isCurrent && (
-                          <span className="text-[10px] font-semibold bg-[#174EA6]/10 text-[#174EA6] px-1.5 py-0.5 rounded">
+                          <span className="text-[0.625rem] font-semibold bg-[#174EA6]/10 text-[#174EA6] px-1.5 py-0.5 rounded">
                             You
                           </span>
                         )}
                       </div>
-                      <div className="text-[11px] text-[#505F79]">{u.designation}</div>
+                      <div className="text-[0.6875rem] text-[#505F79]">{u.designation}</div>
                     </td>
                     <td className="px-3 py-3 font-mono">
                       <Badge
@@ -138,7 +138,7 @@ export default function AdminUsersPage() {
                     </td>
                     <td className="px-4 py-3 text-right">
                       {isCurrent ? (
-                        <span className="text-[11px] text-slate-400 font-semibold italic">Current Admin</span>
+                        <span className="text-[0.6875rem] text-slate-400 font-semibold italic">Current Admin</span>
                       ) : (
                         <button
                           type="button"

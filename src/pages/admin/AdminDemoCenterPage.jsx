@@ -103,7 +103,7 @@ export default function AdminDemoCenterPage() {
       <div className="bg-[#0B1F54] text-white rounded-xl p-6 shadow-md border border-[#162E73] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded text-[0.6875rem] font-bold bg-[#E89B24] text-slate-900 uppercase tracking-wider">
               Smart India Hackathon
             </span>
             <span className="text-xs text-slate-300 font-mono">
@@ -167,12 +167,12 @@ export default function AdminDemoCenterPage() {
                     {isCompleted ? (
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     ) : (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 font-mono shrink-0">
+                      <span className="text-[0.625rem] px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 font-mono shrink-0">
                         {scn.sourceModule?.replace('MODULE_', 'M')}
                       </span>
                     )}
                   </div>
-                  <div className="text-[11px] text-slate-500 mt-1 line-clamp-1">
+                  <div className="text-[0.6875rem] text-slate-500 mt-1 line-clamp-1">
                     {scn.category}
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function AdminDemoCenterPage() {
               {/* Scenario Header */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-slate-100">
                 <div>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-900 uppercase">
+                  <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-blue-100 text-blue-900 uppercase">
                     {selectedScenario.category}
                   </span>
                   <h2 className="text-xl font-bold text-slate-900 mt-1">
@@ -242,7 +242,7 @@ export default function AdminDemoCenterPage() {
                           {isDone ? (
                             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                           ) : (
-                            <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[10px] font-bold ${isCurrent ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-600'}`}>
+                            <span className={`w-4 h-4 rounded-full flex items-center justify-center text-[0.625rem] font-bold ${isCurrent ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-600'}`}>
                               {stepNum}
                             </span>
                           )}
@@ -274,7 +274,7 @@ export default function AdminDemoCenterPage() {
                 <p className="text-xs text-slate-700 font-medium">
                   {selectedScenario.expectedOutcome}
                 </p>
-                <div className="text-[10px] text-slate-400 font-mono mt-1">
+                <div className="text-[0.625rem] text-slate-400 font-mono mt-1">
                   Destination Target Route: {selectedScenario.targetRoute}
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default function AdminDemoCenterPage() {
 
       {/* Confirmation Modal for Reset All */}
       {resetConfirmOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+        <div className="app-modal fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
           <div className="bg-white rounded-xl shadow-xl max-w-sm w-full p-6 space-y-4">
             <h3 className="text-sm font-bold text-slate-900">
               Reset All Demonstration Scenarios?

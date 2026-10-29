@@ -101,7 +101,7 @@ export default function DashboardSidebar({ isOpen, onClose }) {
       >
         {/* Brand Header */}
         <div className="h-16 flex items-center justify-between px-4 border-b border-white/10 shrink-0">
-          <Logo size="sm" light={true} showTagline={false} />
+          <Logo size="sm" variant="dark" />
           <button
             type="button"
             onClick={onClose}
@@ -114,7 +114,7 @@ export default function DashboardSidebar({ isOpen, onClose }) {
 
         {/* Navigation Items */}
         <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-          <div className="px-3 pb-2 text-[10px] uppercase font-bold tracking-wider text-slate-400">
+          <div className="px-3 pb-2 text-[0.625rem] uppercase font-bold tracking-wider text-slate-400">
             Navigation Menu
           </div>
 
@@ -142,10 +142,10 @@ export default function DashboardSidebar({ isOpen, onClose }) {
           {/* Institutional Info Box for Institution Role */}
           {currentRole === 'institution' && currentInstitution && (
             <div className="mt-6 pt-4 border-t border-white/10 px-3">
-              <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-[11px] space-y-1">
-                <div className="text-[10px] font-bold uppercase text-[#E89B24]">Active Institute</div>
+              <div className="p-3 rounded-lg bg-white/5 border border-white/10 text-[0.6875rem] space-y-1">
+                <div className="text-[0.625rem] font-bold uppercase text-[#E89B24]">Active Institute</div>
                 <div className="font-bold text-white line-clamp-1">{currentInstitution.name}</div>
-                <div className="text-slate-400 font-mono text-[10px]">AISHE: {currentInstitution.aisheCode}</div>
+                <div className="text-slate-400 font-mono text-[0.625rem]">AISHE: {currentInstitution.aisheCode}</div>
               </div>
             </div>
           )}

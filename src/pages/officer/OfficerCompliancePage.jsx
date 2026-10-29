@@ -224,39 +224,39 @@ export default function OfficerCompliancePage() {
       {/* KPI Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
         <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm">
-          <div className="text-[11px] font-semibold text-slate-500 uppercase">Assessed</div>
+          <div className="text-[0.6875rem] font-semibold text-slate-500 uppercase">Assessed</div>
           <div className="text-xl font-bold text-[#0B1F54] mt-1">{assessedCount}</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">Institutions monitored</div>
+          <div className="text-[0.625rem] text-slate-400 mt-0.5">Institutions monitored</div>
         </div>
 
         <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm">
-          <div className="text-[11px] font-semibold text-red-600 uppercase">Shortfalls</div>
+          <div className="text-[0.6875rem] font-semibold text-red-600 uppercase">Shortfalls</div>
           <div className="text-xl font-bold text-red-700 mt-1">{shortfallCount}</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">Deposit deficit</div>
+          <div className="text-[0.625rem] text-slate-400 mt-0.5">Deposit deficit</div>
         </div>
 
         <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm">
-          <div className="text-[11px] font-semibold text-amber-600 uppercase">Maturity Alerts</div>
+          <div className="text-[0.6875rem] font-semibold text-amber-600 uppercase">Maturity Alerts</div>
           <div className="text-xl font-bold text-amber-700 mt-1">{upcomingMaturityCount}</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">Within 90 days</div>
+          <div className="text-[0.625rem] text-slate-400 mt-0.5">Within 90 days</div>
         </div>
 
         <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm">
-          <div className="text-[11px] font-semibold text-purple-600 uppercase">Active Cases</div>
+          <div className="text-[0.6875rem] font-semibold text-purple-600 uppercase">Active Cases</div>
           <div className="text-xl font-bold text-purple-700 mt-1">{openCasesCount}</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">Officer scrutiny</div>
+          <div className="text-[0.625rem] text-slate-400 mt-0.5">Officer scrutiny</div>
         </div>
 
         <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm">
-          <div className="text-[11px] font-semibold text-[#174EA6] uppercase">High Priority</div>
+          <div className="text-[0.6875rem] font-semibold text-[#174EA6] uppercase">High Priority</div>
           <div className="text-xl font-bold text-[#174EA6] mt-1">{highPriorityCount}</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">Requires intervention</div>
+          <div className="text-[0.625rem] text-slate-400 mt-0.5">Requires intervention</div>
         </div>
 
         <div className="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm">
-          <div className="text-[11px] font-semibold text-slate-600 uppercase">Stale Scans</div>
+          <div className="text-[0.6875rem] font-semibold text-slate-600 uppercase">Stale Scans</div>
           <div className="text-xl font-bold text-slate-700 mt-1">{staleAssessmentsCount}</div>
-          <div className="text-[10px] text-slate-400 mt-0.5">Reassessment pending</div>
+          <div className="text-[0.625rem] text-slate-400 mt-0.5">Reassessment pending</div>
         </div>
       </div>
 
@@ -317,7 +317,7 @@ export default function OfficerCompliancePage() {
       <div className="bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <thead className="bg-[#F8FAFC] border-b border-slate-200 text-slate-700 font-semibold uppercase tracking-wider text-[0.6875rem]">
               <tr>
                 <th className="py-3 px-4">Institution</th>
                 <th className="py-3 px-4">Applicable Rule</th>
@@ -362,7 +362,7 @@ export default function OfficerCompliancePage() {
                     <tr key={inst.id} className="hover:bg-slate-50/70 transition-colors">
                       <td className="py-3 px-4">
                         <div className="font-semibold text-[#0B1F54]">{inst.name || inst.institutionName}</div>
-                        <div className="text-[10px] text-slate-500 flex items-center gap-1 mt-0.5">
+                        <div className="text-[0.625rem] text-slate-500 flex items-center gap-1 mt-0.5">
                           <span className="font-mono">{inst.code || inst.id}</span>
                           <span>•</span>
                           <span>{inst.category || inst.institutionType || 'TECHNICAL'}</span>
@@ -372,22 +372,22 @@ export default function OfficerCompliancePage() {
                       <td className="py-3 px-4">
                         {assessment?.ruleCode ? (
                           <div>
-                            <span className="font-mono text-[11px] font-semibold text-slate-800">
+                            <span className="font-mono text-[0.6875rem] font-semibold text-slate-800">
                               {assessment.ruleCode}
                             </span>
-                            <div className="text-[10px] text-slate-500">v{assessment.ruleVersion}</div>
+                            <div className="text-[0.625rem] text-slate-500">v{assessment.ruleVersion}</div>
                           </div>
                         ) : (
-                          <span className="text-slate-400 italic text-[11px]">No Rule Configured</span>
+                          <span className="text-slate-400 italic text-[0.6875rem]">No Rule Configured</span>
                         )}
                       </td>
 
                       <td className="py-3 px-4 font-mono">
                         <div>
                           <span className="font-semibold text-slate-900">₹{decInr}</span>
-                          <span className="text-[10px] text-slate-500"> / ₹{reqInr}</span>
+                          <span className="text-[0.625rem] text-slate-500"> / ₹{reqInr}</span>
                         </div>
-                        <div className="text-[10px] text-slate-500 flex items-center gap-1">
+                        <div className="text-[0.625rem] text-slate-500 flex items-center gap-1">
                           <span>{hasAssessment ? `${assessment.coveragePercentage}% coverage` : ''}</span>
                           {shortfallInr && <span className="text-red-600 font-semibold">{shortfallInr}</span>}
                         </div>
@@ -395,22 +395,22 @@ export default function OfficerCompliancePage() {
 
                       <td className="py-3 px-4">
                         {assessment?.adequacyStatus === 'ADEQUATE_DECLARED' && (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                          <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-emerald-100 text-emerald-800">
                             ADEQUATE
                           </span>
                         )}
                         {assessment?.adequacyStatus === 'SHORTFALL_DECLARED' && (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-100 text-red-800">
+                          <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-red-100 text-red-800">
                             SHORTFALL
                           </span>
                         )}
                         {assessment?.adequacyStatus === 'EXCESS_DECLARED' && (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 text-blue-800">
+                          <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-blue-100 text-blue-800">
                             SURPLUS
                           </span>
                         )}
                         {assessment?.adequacyStatus === 'REQUIREMENT_NOT_CONFIGURED' && (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">
+                          <span className="px-2 py-0.5 rounded-full text-[0.625rem] font-bold bg-slate-100 text-slate-600">
                             UNCONFIGURED
                           </span>
                         )}
@@ -422,7 +422,7 @@ export default function OfficerCompliancePage() {
                             {maturityAlerts.slice(0, 1).map((m, idx) => (
                               <span
                                 key={idx}
-                                className={`text-[10px] font-semibold ${
+                                className={`text-[0.625rem] font-semibold ${
                                   m.daysRemaining < 0
                                     ? 'text-red-700 font-bold'
                                     : m.daysRemaining <= 30
@@ -436,16 +436,16 @@ export default function OfficerCompliancePage() {
                               </span>
                             ))}
                             {maturityAlerts.length > 1 && (
-                              <span className="text-[9px] text-slate-400">+{maturityAlerts.length - 1} more alert</span>
+                              <span className="text-[0.5625rem] text-slate-400">+{maturityAlerts.length - 1} more alert</span>
                             )}
                           </div>
                         ) : (
-                          <span className="text-[10px] text-emerald-700 font-medium">All Healthy</span>
+                          <span className="text-[0.625rem] text-emerald-700 font-medium">All Healthy</span>
                         )}
                       </td>
 
                       <td className="py-3 px-4">
-                        <div className="flex items-center gap-1.5 text-[10px]">
+                        <div className="flex items-center gap-1.5 text-[0.625rem]">
                           <span
                             className={`px-1.5 py-0.5 rounded font-mono ${
                               docIssues > 0 ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'
@@ -466,27 +466,27 @@ export default function OfficerCompliancePage() {
 
                       <td className="py-3 px-4">
                         {assessment?.overallPriority === 'CRITICAL' && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-extrabold bg-red-600 text-white">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-extrabold bg-red-600 text-white">
                             CRITICAL
                           </span>
                         )}
                         {assessment?.overallPriority === 'HIGH' && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-white">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-amber-500 text-white">
                             HIGH
                           </span>
                         )}
                         {assessment?.overallPriority === 'MEDIUM' && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-100 text-amber-800 border border-amber-200">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-amber-100 text-amber-800 border border-amber-200">
                             MEDIUM
                           </span>
                         )}
                         {assessment?.overallPriority === 'LOW' && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-800">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-emerald-50 text-emerald-800">
                             LOW
                           </span>
                         )}
                         {assessment?.overallPriority === 'INFORMATIONAL' && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-600">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-medium bg-slate-100 text-slate-600">
                             INFO
                           </span>
                         )}
@@ -505,7 +505,7 @@ export default function OfficerCompliancePage() {
                           </button>
                           <Link
                             to={`/officer/compliance/${inst.id}`}
-                            className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold text-white bg-[#174EA6] hover:bg-[#0B1F54] rounded transition-colors"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 text-[0.6875rem] font-semibold text-white bg-[#174EA6] hover:bg-[#0B1F54] rounded transition-colors"
                           >
                             <Eye className="w-3 h-3" />
                             Dossier

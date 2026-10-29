@@ -118,7 +118,7 @@ export default function OfficerDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Pending Scrutiny</div>
             <div className="text-2xl font-black text-[#E89B24] mt-1">{stats.pending}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Submitted / Resubmitted</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">Submitted / Resubmitted</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-[#FEF7EC] text-[#E89B24] flex items-center justify-center shrink-0">
             <Clock className="w-6 h-6" />
@@ -129,7 +129,7 @@ export default function OfficerDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Under Review</div>
             <div className="text-2xl font-black text-[#174EA6] mt-1">{stats.underReview}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">In active scrutiny</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">In active scrutiny</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-[#E8F0FE] text-[#174EA6] flex items-center justify-center shrink-0">
             <Layers className="w-6 h-6" />
@@ -140,7 +140,7 @@ export default function OfficerDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Clarification Required</div>
             <div className="text-2xl font-black text-amber-700 mt-1">{stats.clarification}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Awaiting institution</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">Awaiting institution</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0">
             <AlertCircle className="w-6 h-6" />
@@ -151,7 +151,7 @@ export default function OfficerDashboard() {
           <div>
             <div className="text-xs text-[#505F79] font-medium">Completed Reviews</div>
             <div className="text-2xl font-black text-[#13805E] mt-1">{stats.completed}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Accepted or Rejected</div>
+            <div className="text-[0.6875rem] text-slate-400 mt-0.5">Accepted or Rejected</div>
           </div>
           <div className="w-12 h-12 rounded-xl bg-[#E6F4EA] text-[#13805E] flex items-center justify-center shrink-0">
             <ShieldCheck className="w-6 h-6" />
@@ -179,7 +179,7 @@ export default function OfficerDashboard() {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-semibold uppercase tracking-wider text-[10px]">
+            <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-semibold uppercase tracking-wider text-[0.625rem]">
               <tr>
                 <th className="px-4 py-3">Reference / Bank</th>
                 <th className="px-3 py-3">Deposit Amount</th>
@@ -193,7 +193,7 @@ export default function OfficerDashboard() {
                 <tr key={fdr.id} className="hover:bg-slate-50">
                   <td className="px-4 py-3">
                     <div className="font-bold text-[#174EA6] font-mono">{fdr.referenceNumber}</div>
-                    <div className="text-[11px] text-[#505F79]">{fdr.bankName}</div>
+                    <div className="text-[0.6875rem] text-[#505F79]">{fdr.bankName}</div>
                   </td>
                   <td className="px-3 py-3 font-semibold">
                     {formatINR(fdr.depositAmountPaise)}
@@ -255,7 +255,7 @@ export default function OfficerDashboard() {
 
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-semibold uppercase tracking-wider text-[10px]">
+                <thead className="bg-[#F5F7FB] border-b border-slate-200 text-[#505F79] font-semibold uppercase tracking-wider text-[0.625rem]">
                   <tr>
                     <th className="px-4 py-3">Institution Name</th>
                     <th className="px-3 py-3">AISHE Code</th>
@@ -269,7 +269,7 @@ export default function OfficerDashboard() {
                     <tr key={inst.id} className="hover:bg-slate-50">
                       <td className="px-4 py-3">
                         <div className="font-bold">{inst.name}</div>
-                        <div className="text-[11px] text-[#505F79]">{inst.type}</div>
+                        <div className="text-[0.6875rem] text-[#505F79]">{inst.type}</div>
                       </td>
                       <td className="px-3 py-3 font-mono font-bold text-[#174EA6]">
                         {inst.aisheCode}
@@ -303,7 +303,7 @@ export default function OfficerDashboard() {
               <h3 className="text-xs font-bold uppercase tracking-wider text-[#0B1F54]">
                 Scrutiny Audit Stream
               </h3>
-              <Link to="/officer/activity" className="text-[11px] font-bold text-[#174EA6] hover:underline">
+              <Link to="/officer/activity" className="text-[0.6875rem] font-bold text-[#174EA6] hover:underline">
                 View All
               </Link>
             </div>
@@ -312,7 +312,7 @@ export default function OfficerDashboard() {
               {recentAudits.map((log) => (
                 <div key={log.id} className="text-xs border-b border-slate-50 pb-2 last:border-none">
                   <div className="font-semibold text-[#0B1F54]">{log.summary}</div>
-                  <div className="flex items-center gap-1.5 text-[10px] text-slate-400 mt-0.5 font-mono">
+                  <div className="flex items-center gap-1.5 text-[0.625rem] text-slate-400 mt-0.5 font-mono">
                     <span>{log.actorRole}</span>
                     <span>&bull;</span>
                     <span>{new Date(log.timestamp).toLocaleTimeString()}</span>

@@ -173,7 +173,7 @@ export default function AdminComplianceMonitoringPage() {
           <div className="text-xl font-bold text-[#0B1F54] mt-1 font-mono">
             ₹{((totalEligibleDeclaredPaise) / 100).toLocaleString('en-IN')}
           </div>
-          <div className="text-[11px] text-slate-400 mt-0.5">{assessedCount} institutions assessed</div>
+          <div className="text-[0.6875rem] text-slate-400 mt-0.5">{assessedCount} institutions assessed</div>
         </div>
 
         <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
@@ -181,7 +181,7 @@ export default function AdminComplianceMonitoringPage() {
           <div className="text-xl font-bold text-red-700 mt-1 font-mono">
             ₹{((totalShortfallPaise) / 100).toLocaleString('en-IN')}
           </div>
-          <div className="text-[11px] text-slate-400 mt-0.5">{shortfallCount} institutions with shortfall</div>
+          <div className="text-[0.6875rem] text-slate-400 mt-0.5">{shortfallCount} institutions with shortfall</div>
         </div>
 
         <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
@@ -189,7 +189,7 @@ export default function AdminComplianceMonitoringPage() {
           <div className="text-xl font-bold text-[#174EA6] mt-1">
             {assessedCount > 0 ? Math.round(((adequateCount + excessCount) / assessedCount) * 100) : 0}%
           </div>
-          <div className="text-[11px] text-slate-400 mt-0.5">{adequateCount + excessCount} adequate or surplus</div>
+          <div className="text-[0.6875rem] text-slate-400 mt-0.5">{adequateCount + excessCount} adequate or surplus</div>
         </div>
 
         <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
@@ -197,7 +197,7 @@ export default function AdminComplianceMonitoringPage() {
           <div className="text-xl font-bold text-purple-700 mt-1">
             {cases.filter((c) => ['OPEN', 'UNDER_REVIEW', 'AWAITING_INSTITUTION_RESPONSE'].includes(c.status)).length}
           </div>
-          <div className="text-[11px] text-slate-400 mt-0.5">Formal cases open</div>
+          <div className="text-[0.6875rem] text-slate-400 mt-0.5">Formal cases open</div>
         </div>
       </div>
 

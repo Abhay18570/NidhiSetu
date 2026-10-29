@@ -36,11 +36,11 @@ export default function OfficerActivityPage() {
               <div key={log.id} className="p-4 hover:bg-slate-50 transition-colors text-xs">
                 <div className="flex items-center justify-between gap-2">
                   <span className="font-bold text-[#0B1F54]">{log.summary}</span>
-                  <span className="font-mono text-[10px] text-slate-400">
+                  <span className="font-mono text-[0.625rem] text-slate-400">
                     {new Date(log.timestamp).toLocaleString()}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 mt-1 text-[11px] text-slate-500 font-mono">
+                <div className="flex items-center gap-2 mt-1 text-[0.6875rem] text-slate-500 font-mono">
                   <span>Event: {log.eventType}</span>
                   <span>&bull;</span>
                   <span>Actor: {log.actorId} ({log.actorRole})</span>

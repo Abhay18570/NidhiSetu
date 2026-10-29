@@ -226,7 +226,7 @@ export default function FaqPage() {
                 <div>
                   <div className="font-bold text-[#0B1F54]">Toll-Free Helpline:</div>
                   <div className="font-mono text-sm text-[#174EA6] font-semibold">{SITE_CONFIG.tollFree}</div>
-                  <div className="text-[11px] text-slate-400">Monday - Friday (9 AM - 6 PM IST)</div>
+                  <div className="text-[0.6875rem] text-slate-400">Monday - Friday (9 AM - 6 PM IST)</div>
                 </div>
 
                 <div>

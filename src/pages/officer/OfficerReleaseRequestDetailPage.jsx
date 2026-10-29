@@ -327,14 +327,14 @@ export default function OfficerReleaseRequestDetailPage() {
           <span className="font-bold text-gray-900 block">Adjudication Rationale on Record:</span>
           <p className="text-gray-800">{request.clearanceReason || request.declinedReason}</p>
           {request.clearedAt && (
-            <span className="text-gray-500 text-[11px] block mt-1">Cleared At: {request.clearedAt}</span>
+            <span className="text-gray-500 text-[0.6875rem] block mt-1">Cleared At: {request.clearedAt}</span>
           )}
         </div>
       )}
 
       {/* Modal Dialog */}
       {modalType && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="app-modal fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow-xl max-w-lg w-full p-5 border border-gray-200 space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-gray-200">
               <h3 className="text-base font-bold text-[#0B1F54]">

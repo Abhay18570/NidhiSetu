@@ -130,7 +130,7 @@ export default function InstitutionCompliancePage() {
 
       {/* Compliance Overview Card */}
       <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-5">
-        <div className="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-3 mb-4">
           <div>
             <h2 className="text-base font-bold text-[#0B1F54]">Applicable Regulatory Requirement Status</h2>
             <div className="text-xs text-slate-500 mt-0.5">
@@ -178,7 +178,7 @@ export default function InstitutionCompliancePage() {
             <div className="text-2xl font-bold text-slate-900 mt-1">
               ₹{((assessment?.requiredAmountPaise || 0) / 100).toLocaleString('en-IN')}
             </div>
-            <div className="text-[11px] text-slate-500 mt-1 font-mono">
+            <div className="text-[0.6875rem] text-slate-500 mt-1 font-mono">
               Integer Paise: {assessment?.requiredAmountPaise || 0}
             </div>
           </div>
@@ -188,7 +188,7 @@ export default function InstitutionCompliancePage() {
             <div className="text-2xl font-bold text-[#174EA6] mt-1">
               ₹{((assessment?.eligibleDeclaredAmountPaise || 0) / 100).toLocaleString('en-IN')}
             </div>
-            <div className="text-[11px] text-blue-700 mt-1">
+            <div className="text-[0.6875rem] text-blue-700 mt-1">
               Coverage: {assessment?.coveragePercentage}% of requirement
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function InstitutionCompliancePage() {
             >
               ₹{(((assessment?.shortfallPaise || assessment?.surplusPaise || 0)) / 100).toLocaleString('en-IN')}
             </div>
-            <div className="text-[11px] text-slate-500 mt-1">
+            <div className="text-[0.6875rem] text-slate-500 mt-1">
               {assessment?.shortfallPaise > 0
                 ? 'Action required: Replenish deposit with valid FDR'
                 : 'Meets minimum regulatory threshold'}
@@ -260,7 +260,7 @@ export default function InstitutionCompliancePage() {
                         <span className="font-mono font-bold text-slate-900">{c.caseNumber}</span>
                         <span className="font-semibold text-[#0B1F54]">{c.title}</span>
                       </div>
-                      <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">
+                      <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-amber-100 text-amber-800">
                         {c.status}
                       </span>
                     </div>
@@ -275,7 +275,7 @@ export default function InstitutionCompliancePage() {
                         </div>
                         <div className="text-slate-800">{latestClarification.question}</div>
                         {latestClarification.followUpDeadline && (
-                          <div className="text-[11px] text-red-600 font-medium">
+                          <div className="text-[0.6875rem] text-red-600 font-medium">
                             Response Requested By: {latestClarification.followUpDeadline}
                           </div>
                         )}
@@ -316,9 +316,9 @@ export default function InstitutionCompliancePage() {
               <div key={idx} className="p-3 rounded-lg border border-slate-200 bg-slate-50 flex items-center justify-between">
                 <div>
                   <div className="font-semibold text-slate-900">{m.explanation}</div>
-                  <div className="text-[11px] text-[#174EA6] mt-0.5">{m.recommendedAction}</div>
+                  <div className="text-[0.6875rem] text-[#174EA6] mt-0.5">{m.recommendedAction}</div>
                 </div>
-                <div className="text-right font-mono text-[11px] font-semibold text-slate-700">
+                <div className="text-right font-mono text-[0.6875rem] font-semibold text-slate-700">
                   {m.daysRemaining < 0 ? `${Math.abs(m.daysRemaining)}d Overdue` : `${m.daysRemaining}d Remaining`}
                 </div>
               </div>
@@ -333,7 +333,7 @@ export default function InstitutionCompliancePage() {
 
       {/* Modal: Submit Clarification */}
       {responseModalOpen && targetCase && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+        <div className="app-modal fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white rounded-xl shadow-xl max-w-lg w-full border border-slate-200 overflow-hidden">
             <div className="px-5 py-4 bg-[#0B1F54] text-white flex items-center justify-between">
               <h3 className="font-bold text-sm">Submit Clarification Response</h3>

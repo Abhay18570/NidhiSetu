@@ -209,12 +209,12 @@ export default function OfficerReleaseRequestsPage() {
 
                     <td className="px-4 py-3.5">
                       <div className="font-semibold text-gray-900">{req.institutionName}</div>
-                      <div className="text-[11px] text-gray-500">ID: {req.institutionId}</div>
+                      <div className="text-[0.6875rem] text-gray-500">ID: {req.institutionId}</div>
                     </td>
 
                     <td className="px-4 py-3.5">
                       <div className="font-semibold text-gray-800">{req.originalFdrNumber}</div>
-                      <div className="text-[11px] text-gray-500">
+                      <div className="text-[0.6875rem] text-gray-500">
                         ₹{(((req.amountPaise || 0) / 100)).toLocaleString('en-IN')}
                       </div>
                     </td>
@@ -229,7 +229,7 @@ export default function OfficerReleaseRequestsPage() {
 
                     <td className="px-4 py-3.5">
                       <span
-                        className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold ${
+                        className={`inline-flex items-center px-2 py-0.5 rounded text-[0.6875rem] font-semibold ${
                           req.status === RELEASE_STATUS.ADMINISTRATIVELY_CLEARED
                             ? 'bg-emerald-100 text-emerald-800'
                             : req.status === RELEASE_STATUS.DECLINED

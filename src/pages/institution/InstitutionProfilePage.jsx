@@ -144,7 +144,7 @@ export default function InstitutionProfilePage() {
                 1. Statutory Regulatory Record (Read-Only)
               </h2>
             </div>
-            <span className="text-[11px] text-[#505F79]">Immutable statutory identifiers</span>
+            <span className="text-[0.6875rem] text-[#505F79]">Immutable statutory identifiers</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -199,7 +199,7 @@ export default function InstitutionProfilePage() {
                 2. Authorized Nodal Officer & Signatory
               </h2>
             </div>
-            <span className="text-[11px] text-[#174EA6] font-semibold">Editable Credentials</span>
+            <span className="text-[0.6875rem] text-[#174EA6] font-semibold">Editable Credentials</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -262,7 +262,7 @@ export default function InstitutionProfilePage() {
             <h2 className="text-sm font-bold text-[#0B1F54] uppercase tracking-wider">
               3. Campus Street Address & Postal Details
             </h2>
-            <span className="text-[11px] text-[#174EA6] font-semibold">Editable Location</span>
+            <span className="text-[0.6875rem] text-[#174EA6] font-semibold">Editable Location</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -323,7 +323,7 @@ export default function InstitutionProfilePage() {
 
         {/* Action Buttons */}
         <div className="flex items-center justify-between pt-2">
-          <div className="text-[11px] text-slate-500">
+          <div className="text-[0.6875rem] text-slate-500">
             Last Updated: {currentInstitution?.updatedAt ? new Date(currentInstitution.updatedAt).toLocaleString() : 'N/A'}
           </div>
 

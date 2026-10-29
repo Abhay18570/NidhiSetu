@@ -263,7 +263,7 @@ export default function OfficerDocumentIntelligencePage() {
           <div className="text-2xl font-bold text-slate-800 mt-2">
             {summaryStats.totalAnalyzed}
           </div>
-          <p className="text-[11px] text-slate-400 mt-1">Processed with OCR extraction</p>
+          <p className="text-[0.6875rem] text-slate-400 mt-1">Processed with OCR extraction</p>
         </Card>
 
         {/* Records with Discrepancies */}
@@ -275,7 +275,7 @@ export default function OfficerDocumentIntelligencePage() {
           <div className="text-2xl font-bold text-slate-800 mt-2">
             {summaryStats.withDiscrepancies}
           </div>
-          <p className="text-[11px] text-slate-400 mt-1">Field variance or missing data</p>
+          <p className="text-[0.6875rem] text-slate-400 mt-1">Field variance or missing data</p>
         </Card>
 
         {/* High-Priority Findings */}
@@ -287,7 +287,7 @@ export default function OfficerDocumentIntelligencePage() {
           <div className="text-2xl font-bold text-slate-800 mt-2">
             {summaryStats.highPriorityCount}
           </div>
-          <p className="text-[11px] text-slate-400 mt-1">Amount / date / collision alarms</p>
+          <p className="text-[0.6875rem] text-slate-400 mt-1">Amount / date / collision alarms</p>
         </Card>
 
         {/* Pending Human Reviews */}
@@ -299,7 +299,7 @@ export default function OfficerDocumentIntelligencePage() {
           <div className="text-2xl font-bold text-slate-800 mt-2">
             {summaryStats.pendingReviews}
           </div>
-          <p className="text-[11px] text-slate-400 mt-1">Requiring adjudication</p>
+          <p className="text-[0.6875rem] text-slate-400 mt-1">Requiring adjudication</p>
         </Card>
       </div>
 
@@ -380,7 +380,7 @@ export default function OfficerDocumentIntelligencePage() {
           <span className="font-semibold text-xs text-slate-700">
             Analyzed FDR Submissions ({filteredRecords.length})
           </span>
-          <span className="text-[11px] text-slate-500">
+          <span className="text-[0.6875rem] text-slate-500">
             Click &ldquo;View Investigation Dossier&rdquo; to review evidence & adjudicate
           </span>
         </div>
@@ -430,12 +430,12 @@ export default function OfficerDocumentIntelligencePage() {
                       </td>
 
                       {/* Institution */}
-                      <td className="py-3 px-4 text-slate-800 font-medium max-w-[200px] truncate" title={item.institutionName || fdr.institutionName}>
+                      <td className="py-3 px-4 text-slate-800 font-medium max-w-[12.5rem] truncate" title={item.institutionName || fdr.institutionName}>
                         {item.institutionName || fdr.institutionName || 'Unknown Institution'}
                       </td>
 
                       {/* Document */}
-                      <td className="py-3 px-4 text-slate-600 truncate max-w-[180px]" title={item.documentFileName || fdr.fileName}>
+                      <td className="py-3 px-4 text-slate-600 truncate max-w-[11.25rem]" title={item.documentFileName || fdr.fileName}>
                         <div className="flex items-center gap-1.5">
                           <FileText className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                           <span className="truncate">{item.documentFileName || fdr.fileName || 'document.pdf'}</span>
@@ -447,7 +447,7 @@ export default function OfficerDocumentIntelligencePage() {
                         <span className="font-semibold text-slate-700">
                           {item.scorecard?.completeness?.percentage || 0}%
                         </span>
-                        <span className="text-[10px] text-slate-400 block font-mono">
+                        <span className="text-[0.625rem] text-slate-400 block font-mono">
                           {item.scorecard?.completeness?.extractedCount}/{item.scorecard?.completeness?.totalFields} fields
                         </span>
                       </td>
@@ -480,22 +480,22 @@ export default function OfficerDocumentIntelligencePage() {
                       {/* Priority */}
                       <td className="py-3 px-4">
                         {highestSev === FINDING_SEVERITY.HIGH && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-700 border border-rose-300">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-rose-100 text-rose-700 border border-rose-300">
                             HIGH
                           </span>
                         )}
                         {highestSev === FINDING_SEVERITY.MEDIUM && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700 border border-amber-300">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-amber-100 text-amber-700 border border-amber-300">
                             MEDIUM
                           </span>
                         )}
                         {highestSev === FINDING_SEVERITY.LOW && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700 border border-slate-300">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-bold bg-slate-100 text-slate-700 border border-slate-300">
                             LOW
                           </span>
                         )}
                         {highestSev === 'INFO' && (
-                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                          <span className="px-2 py-0.5 rounded text-[0.625rem] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
                             CLEAR
                           </span>
                         )}
@@ -505,7 +505,7 @@ export default function OfficerDocumentIntelligencePage() {
                       <td className="py-3 px-4 text-right">
                         <Link
                           to={`/officer/document-intelligence/${item.fdrId}`}
-                          className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#174EA6] bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded transition-colors"
+                          className="inline-flex items-center gap-1 text-[0.6875rem] font-semibold text-[#174EA6] bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded transition-colors"
                         >
                           <span>Review Dossier</span>
                           <ExternalLink className="w-3 h-3" />

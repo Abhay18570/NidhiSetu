@@ -80,7 +80,7 @@ export default function AdminAuditLogsPage() {
       <Card className="p-0 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs font-mono">
-            <thead className="bg-slate-50 border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[10px] font-sans">
+            <thead className="bg-slate-50 border-b border-slate-200 text-[#505F79] font-bold uppercase tracking-wider text-[0.625rem] font-sans">
               <tr>
                 <th className="px-4 py-3">Timestamp</th>
                 <th className="px-3 py-3">Event Type</th>
@@ -99,18 +99,18 @@ export default function AdminAuditLogsPage() {
               ) : (
                 filtered.map((log) => (
                   <tr key={log.id} className="hover:bg-slate-50">
-                    <td className="px-4 py-3 text-[11px] text-slate-500 whitespace-nowrap">
+                    <td className="px-4 py-3 text-[0.6875rem] text-slate-500 whitespace-nowrap">
                       {new Date(log.timestamp).toLocaleString()}
                     </td>
                     <td className="px-3 py-3">
-                      <span className="px-1.5 py-0.5 rounded text-[10px] bg-[#E8F0FE] text-[#174EA6] font-bold">
+                      <span className="px-1.5 py-0.5 rounded text-[0.625rem] bg-[#E8F0FE] text-[#174EA6] font-bold">
                         {log.eventType}
                       </span>
                     </td>
                     <td className="px-3 py-3 text-slate-700">
                       {log.actorId} <span className="text-slate-400">({log.actorRole})</span>
                     </td>
-                    <td className="px-3 py-3 text-slate-600 truncate max-w-[120px]">
+                    <td className="px-3 py-3 text-slate-600 truncate max-w-[7.5rem]">
                       {log.targetEntityId}
                     </td>
                     <td className="px-4 py-3 font-sans text-xs text-[#0B1F54]">
